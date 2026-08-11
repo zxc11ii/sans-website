@@ -212,6 +212,13 @@ const variants = products.reduce((sum, p) => sum + p.variants.length, 0);
 console.log(`Собрано страниц: ${pages.length} (изменено: ${written})`);
 console.log(`Товаров: ${products.length}, вариантов: ${variants}`);
 
+if (!site.formEndpoint) {
+    console.log(`
+ВНИМАНИЕ: в data/site.json не указан адрес приёма заявок ("formEndpoint").
+Формы просят позвонить вместо отправки. Впишите адрес обработчика
+(например https://formspree.io/f/xxxxxxx) и запустите сборку заново.`);
+}
+
 if (!siteUrl) {
     console.log(`
 ВНИМАНИЕ: в data/site.json не указан адрес сайта ("url").

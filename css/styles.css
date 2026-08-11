@@ -1635,7 +1635,7 @@ section {
 /* ===== Scroll to Top Button ===== */
 .scroll-to-top {
     position: fixed;
-    bottom: 30px;
+    bottom: calc(30px + var(--floating-offset, 0px));
     right: 30px;
     width: 50px;
     height: 50px;
@@ -1910,7 +1910,7 @@ section {
     .scroll-to-top {
         width: 45px;
         height: 45px;
-        bottom: 20px;
+        bottom: calc(20px + var(--floating-offset, 0px));
         right: 20px;
     }
 }
@@ -2092,7 +2092,7 @@ section {
     .scroll-to-top {
         width: 40px;
         height: 40px;
-        bottom: 16px;
+        bottom: calc(16px + var(--floating-offset, 0px));
         right: 16px;
     }
     
@@ -2377,7 +2377,7 @@ section {
    класс .cart-visible вешает JS (см. ShoppingCart.updateCartButton) */
 .discount-popup {
     position: fixed;
-    bottom: 120px;
+    bottom: calc(120px + var(--floating-offset, 0px));
     right: 20px;
     z-index: 1000;
     opacity: 0;
@@ -2386,7 +2386,7 @@ section {
 }
 
 .discount-popup.cart-visible {
-    bottom: 200px;
+    bottom: calc(200px + var(--floating-offset, 0px));
 }
 
 .discount-popup.show {
@@ -2645,7 +2645,7 @@ section {
 /* ===== Shopping Cart ===== */
 .cart-button {
     position: fixed;
-    bottom: 100px;
+    bottom: calc(100px + var(--floating-offset, 0px));
     right: 30px;
     width: 60px;
     height: 60px;
@@ -3019,7 +3019,7 @@ section {
 /* Responsive - Tablet */
 @media (max-width: 968px) {
     .cart-button {
-        bottom: 20px;
+        bottom: calc(20px + var(--floating-offset, 0px));
         right: 20px;
         width: 56px;
         height: 56px;
@@ -3039,7 +3039,7 @@ section {
     }
     
     .scroll-to-top {
-        bottom: 90px;
+        bottom: calc(90px + var(--floating-offset, 0px));
         right: 20px;
         width: 48px;
         height: 48px;
@@ -3051,13 +3051,13 @@ section {
     }
     
     .discount-popup {
-        bottom: 160px;
+        bottom: calc(160px + var(--floating-offset, 0px));
         right: 20px;
         left: 20px;
     }
 
     .discount-popup.cart-visible {
-        bottom: 240px;
+        bottom: calc(240px + var(--floating-offset, 0px));
     }
 
     .discount-popup-mini {
@@ -3109,7 +3109,7 @@ section {
 @media (max-width: 640px) {
     .cart-button {
         top: auto;
-        bottom: 80px;
+        bottom: calc(80px + var(--floating-offset, 0px));
         right: 16px;
         width: 50px;
         height: 50px;
@@ -3130,7 +3130,7 @@ section {
     
     .scroll-to-top {
         top: auto;
-        bottom: 20px;
+        bottom: calc(20px + var(--floating-offset, 0px));
         right: 16px;
         width: 46px;
         height: 46px;
@@ -3144,13 +3144,13 @@ section {
     /* Popup снизу под кнопками */
     .discount-popup {
         top: auto;
-        bottom: 80px;
+        bottom: calc(80px + var(--floating-offset, 0px));
         right: 16px;
         left: 16px;
     }
 
     .discount-popup.cart-visible {
-        bottom: 150px;
+        bottom: calc(150px + var(--floating-offset, 0px));
     }
     
     .discount-popup-mini {
@@ -3216,5 +3216,84 @@ section {
     .quantity-display {
         min-width: 35px;
         font-size: 0.95rem;
+    }
+}
+
+/* ===== Статус отправки формы ===== */
+.form-status {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.form-status--success {
+    background: #eaf7ee;
+    color: #1e7b34;
+    border: 1px solid #b7e2c2;
+}
+
+.form-status--error {
+    background: #fdecee;
+    color: #a3182f;
+    border: 1px solid #f3c2c9;
+}
+
+/* ===== Уведомление о cookie ===== */
+.cookie-banner {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    z-index: 1100;
+    display: none;
+    align-items: center;
+    gap: 20px;
+    max-width: 620px;
+    padding: 18px 22px;
+    background: var(--white);
+    border: 1px solid var(--border-gray);
+    border-left: 4px solid var(--primary-red);
+    border-radius: 6px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+}
+
+.cookie-banner.visible {
+    display: flex;
+}
+
+.cookie-banner-text {
+    flex: 1;
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--text-light);
+}
+
+.cookie-banner-text a {
+    color: var(--primary-red);
+    text-decoration: underline;
+}
+
+.cookie-banner-accept {
+    flex-shrink: 0;
+    padding: 10px 28px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+    .cookie-banner {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 16px 18px;
+        max-width: none;
+    }
+
+    .cookie-banner-text {
+        font-size: 0.8rem;
     }
 }

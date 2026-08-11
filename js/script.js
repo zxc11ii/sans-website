@@ -25,6 +25,74 @@ function resolveAsset(path) {
     return clean ? new URL(clean, SITE_ROOT).href : '';
 }
 
+const CONFIG = window.SANS_CONFIG || {};
+
+// ===== Отправка заявок =====
+// Единая точка отправки всех форм сайта. Адрес получателя задаётся
+// в data/site.json -> formEndpoint, здесь его менять не нужно.
+
+function setFormStatus(form, type, message) {
+    let box = form.querySelector('.form-status');
+    if (!box) {
+        box = document.createElement('p');
+        box.className = 'form-status';
+        form.appendChild(box);
+    }
+    box.className = `form-status form-status--${type}`;
+    box.textContent = message;
+    box.hidden = false;
+}
+
+function clearFormStatus(form) {
+    const box = form.querySelector('.form-status');
+    if (box) box.hidden = true;
+}
+
+/**
+ * Отправляет заявку. Возвращает true при успехе.
+ * Пока formEndpoint не задан, честно сообщает об этом вместо тихой потери заявки.
+ */
+async function sendLead(form, payload) {
+    const button = form.querySelector('button[type="submit"]');
+    const label = button ? button.textContent : '';
+
+    if (!CONFIG.formEndpoint) {
+        console.warn('Заявка не отправлена: не задан formEndpoint в data/site.json', payload);
+        setFormStatus(form, 'error',
+            `Форма заявок ещё не подключена. Пожалуйста, позвоните нам: ${CONFIG.phone || ''}`);
+        return false;
+    }
+
+    if (button) {
+        button.disabled = true;
+        button.textContent = 'Отправляем…';
+    }
+    clearFormStatus(form);
+
+    try {
+        const response = await fetch(CONFIG.formEndpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({ ...payload, page: window.location.href })
+        });
+
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        setFormStatus(form, 'success', 'Заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+        return true;
+    } catch (error) {
+        console.error('Не удалось отправить заявку:', error);
+        setFormStatus(form, 'error',
+            `Не удалось отправить заявку. Попробуйте ещё раз или позвоните: ${CONFIG.phone || ''}`);
+        return false;
+    } finally {
+        if (button) {
+            button.disabled = false;
+            button.textContent = label;
+        }
+    }
+}
+
 // Mobile Menu Toggle
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -108,42 +176,18 @@ if (scrollToTopBtn) {
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // Get form data
-        const formData = {
+
+        const sent = await sendLead(contactForm, {
+            type: 'contact',
             name: document.getElementById('name').value,
             phone: document.getElementById('phone').value,
             email: document.getElementById('email').value,
             message: document.getElementById('message').value
-        };
-        
-        // Here you would typically send the data to a server
-        // For now, we'll just show an alert
-        alert(`Спасибо за заявку, ${formData.name}!\n\nМы свяжемся с вами в ближайшее время по телефону ${formData.phone}.`);
-        
-        // Reset form
-        contactForm.reset();
-        
-        // In a real application, you would send this data to your server:
-        /*
-        fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-            contactForm.reset();
-        })
-        .catch(error => {
-            alert('Произошла ошибка. Пожалуйста, попробуйте позже или позвоните нам.');
         });
-        */
+
+        if (sent) contactForm.reset();
     });
 }
 
@@ -273,44 +317,22 @@ if (discountPopup) {
     
     // Form submission
     if (discountForm) {
-        discountForm.addEventListener('submit', (e) => {
+        discountForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
-            const formData = {
+
+            const sent = await sendLead(discountForm, {
+                type: 'discount',
                 name: document.getElementById('discountName').value,
                 phone: document.getElementById('discountPhone').value,
                 email: document.getElementById('discountEmail').value,
-                message: document.getElementById('discountMessage').value,
-                type: 'discount'
-            };
-            
-            // Here you would send data to server
-            alert(`Спасибо за заявку, ${formData.name}!\n\nМы свяжемся с вами в ближайшее время и расскажем о специальном предложении.\n\nТелефон: ${formData.phone}`);
-
-            // Hide popup (и больше не показываем - заявка уже оставлена)
-            dismissDiscountPopup();
-            
-            // Reset form
-            discountForm.reset();
-            
-            /* In production, use fetch:
-            fetch('/api/discount', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-                discountPopup.classList.remove('show', 'expanded');
-                discountForm.reset();
-            })
-            .catch(error => {
-                alert('Произошла ошибка. Пожалуйста, позвоните нам или попробуйте позже.');
+                message: document.getElementById('discountMessage').value
             });
-            */
+
+            if (sent) {
+                discountForm.reset();
+                // закрываем не сразу, чтобы человек успел увидеть подтверждение
+                setTimeout(dismissDiscountPopup, 2500);
+            }
         });
     }
 }
@@ -614,55 +636,28 @@ class ShoppingCart {
         });
     }
     
-    submitOrder() {
-        const formData = {
+    async submitOrder() {
+        const form = document.getElementById('cartOrderForm');
+
+        const sent = await sendLead(form, {
+            type: 'order',
             name: document.getElementById('cartOrderName').value,
             phone: document.getElementById('cartOrderPhone').value,
             email: document.getElementById('cartOrderEmail').value,
             message: document.getElementById('cartOrderMessage').value,
-            items: this.items
-        };
-        
-        // Generate order text for alert
-        const orderText = this.items.map(item => 
-            `${item.name} - ${item.quantity} шт.`
-        ).join('\n');
-        
-        const totalCount = this.getTotalCount();
-        
-        // Show success message
-        alert(`Спасибо за заявку, ${formData.name}!\n\nВаш заказ:\n${orderText}\n\nВсего: ${totalCount} ${this.getItemWord(totalCount)}\n\nМы свяжемся с вами в ближайшее время по телефону ${formData.phone}.`);
-        
-        // Clear cart and close modals
+            items: this.items.map(item => ({ name: item.name, quantity: item.quantity })),
+            totalCount: this.getTotalCount()
+        });
+
+        // корзину очищаем только если заявка действительно ушла
+        if (!sent) return;
+
         this.items = [];
         this.saveCart();
         this.updateCartButton();
-        this.closeOrderForm();
-        
-        // Reset form
-        document.getElementById('cartOrderForm').reset();
-        
-        /* In production, send data to server:
-        fetch('/api/order', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-            this.items = [];
-            this.saveCart();
-            this.updateCartButton();
-            this.closeOrderForm();
-            document.getElementById('cartOrderForm').reset();
-        })
-        .catch(error => {
-            alert('Произошла ошибка. Пожалуйста, позвоните нам или попробуйте позже.');
-        });
-        */
+        form.reset();
+
+        setTimeout(() => this.closeOrderForm(), 2500);
     }
     
     openCart() {
@@ -731,6 +726,33 @@ class ShoppingCart {
 document.addEventListener('DOMContentLoaded', () => {
     window.shoppingCart = new ShoppingCart();
 });
+
+// ===== Уведомление об использовании cookie =====
+const COOKIE_CONSENT_KEY = 'sansCookieConsent';
+const cookieBanner = document.getElementById('cookieBanner');
+
+if (cookieBanner) {
+    // пока баннер виден, поднимаем плавающие кнопки, чтобы он их не перекрывал
+    const setFloatingOffset = () => {
+        const height = cookieBanner.offsetHeight;
+        document.body.style.setProperty('--floating-offset', height ? `${height + 16}px` : '0px');
+    };
+
+    if (!localStorage.getItem(COOKIE_CONSENT_KEY)) {
+        cookieBanner.classList.add('visible');
+        setFloatingOffset();
+        window.addEventListener('resize', setFloatingOffset);
+    }
+
+    const acceptButton = document.getElementById('cookieAccept');
+    if (acceptButton) {
+        acceptButton.addEventListener('click', () => {
+            localStorage.setItem(COOKIE_CONSENT_KEY, new Date().toISOString());
+            cookieBanner.classList.remove('visible');
+            document.body.style.setProperty('--floating-offset', '0px');
+        });
+    }
+}
 
 // Закрытие по Esc: сначала модалки корзины, затем мобильное меню
 document.addEventListener('keydown', (e) => {

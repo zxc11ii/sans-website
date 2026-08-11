@@ -275,6 +275,23 @@ const discountPopup = ({ dir }) => `    <!-- Discount Popup -->
         </div>
     </div>`;
 
+const cookieBanner = (site, { dir }) => `    <!-- Cookie Notice -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Использование cookie">
+        <p class="cookie-banner-text">
+            Мы используем cookie и локальное хранилище браузера, чтобы сайт работал корректно — например, чтобы корзина запоминала выбранные товары. Подробности в <a href="${link(dir, 'pages/privacy.html')}">политике конфиденциальности</a>.
+        </p>
+        <button class="btn btn-primary cookie-banner-accept" id="cookieAccept">Принять</button>
+    </div>`;
+
+/** Настройки, которые нужны скриптам на странице */
+const config = (site) => `    <script>
+        window.SANS_CONFIG = ${JSON.stringify({
+        formEndpoint: site.formEndpoint || '',
+        phone: site.phone,
+        phoneHref: site.phoneHref
+    })};
+    </script>`;
+
 const cart = (site, { root, dir }) => `    <!-- Shopping Cart Button -->
     <button id="cartButton" class="cart-button" aria-label="Корзина">
         <img src="${root}images/icons/shopping-cart.svg" alt="Корзина">
@@ -361,7 +378,8 @@ function layout(site, page) {
 
     if (page.showPopup) parts.push('', discountPopup(page));
     parts.push('', cart(site, page));
-    parts.push('', `    <script src="${page.root}js/script.js"></script>`, '</body>', '</html>', '');
+    parts.push('', cookieBanner(site, page));
+    parts.push('', config(site), `    <script src="${page.root}js/script.js"></script>`, '</body>', '</html>', '');
 
     return parts.join('\n');
 }
