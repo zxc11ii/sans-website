@@ -90,6 +90,7 @@ for (const product of products) {
         title: product.pageTitle,
         description: product.metaDescription,
         showPopup: true,
+        product,
         body: () => productBody(product, products, { root: '../../', dir: 'pages/products' })
     });
 }
@@ -118,9 +119,72 @@ for (const page of pages) {
     written++;
 }
 
+// --- sitemap.xml и robots.txt -----------------------------------------
+
+const siteUrl = (site.url || '').replace(/\/+$/, '');
+
+function buildSitemap() {
+    if (!siteUrl) return null;
+
+    const today = new Date().toISOString().slice(0, 10);
+    const urls = pages.map((page) => {
+        const loc = page.out === 'index.html' ? `${siteUrl}/` : `${siteUrl}/${page.out}`;
+        // главная и каталог обновляются чаще карточек
+        const priority = page.out === 'index.html' ? '1.0'
+            : page.out === 'pages/packaging.html' ? '0.9'
+            : page.product ? '0.7' : '0.6';
+        return `    <url>
+        <loc>${loc}</loc>
+        <lastmod>${today}</lastmod>
+        <priority>${priority}</priority>
+    </url>`;
+    });
+
+    return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.join('\n')}
+</urlset>
+`;
+}
+
+function buildRobots() {
+    const lines = ['User-agent: *', 'Allow: /', ''];
+    if (siteUrl) lines.push(`Sitemap: ${siteUrl}/sitemap.xml`, '');
+    return lines.join('\n');
+}
+
+const extraFiles = [['robots.txt', buildRobots()]];
+const sitemap = buildSitemap();
+if (sitemap) {
+    extraFiles.push(['sitemap.xml', sitemap]);
+} else if (fs.existsSync(path.join(ROOT, 'sitemap.xml'))) {
+    // адрес убрали из site.json - старая карта сайта указывала бы в никуда
+    if (CHECK_ONLY) {
+        stale++;
+        console.log('лишний: sitemap.xml (в site.json не указан адрес сайта)');
+    } else {
+        fs.unlinkSync(path.join(ROOT, 'sitemap.xml'));
+        written++;
+    }
+}
+
+for (const [name, content] of extraFiles) {
+    const file = path.join(ROOT, name);
+    const current = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : null;
+    if (current === content) continue;
+
+    if (CHECK_ONLY) {
+        stale++;
+        console.log(`устарел: ${name}`);
+        continue;
+    }
+    fs.writeFileSync(file, content, 'utf8');
+    written++;
+}
+
 if (CHECK_ONLY) {
     console.log(stale
-        ? `\nСтраниц не совпадает с данными: ${stale}. Запустите: node scripts/build.js`
+        ? `\nФайлов не совпадает с данными: ${stale}. Запустите: node scripts/build.js`
         : `Все ${pages.length} страниц актуальны`);
     process.exit(stale ? 1 : 0);
 }
@@ -128,3 +192,10 @@ if (CHECK_ONLY) {
 const variants = products.reduce((sum, p) => sum + p.variants.length, 0);
 console.log(`Собрано страниц: ${pages.length} (изменено: ${written})`);
 console.log(`Товаров: ${products.length}, вариантов: ${variants}`);
+
+if (!siteUrl) {
+    console.log(`
+ВНИМАНИЕ: в data/site.json не указан адрес сайта ("url").
+Пока он пустой, не создаются: canonical, og:url, og:image и sitemap.xml.
+Впишите адрес (например https://sans.ru) и запустите сборку заново.`);
+}

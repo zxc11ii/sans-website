@@ -20,20 +20,147 @@ const esc = (s) => String(s == null ? '' : s)
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 
-const head = (site, { root, title, description }) => `<!DOCTYPE html>
+/** Абсолютный адрес файла на сайте; null, пока домен не задан в site.json */
+const absolute = (site, filePath) => {
+    if (!site.url) return null;
+    const base = site.url.replace(/\/+$/, '');
+    const clean = filePath === 'index.html' ? '' : filePath;
+    return `${base}/${clean}`;
+};
+
+/** canonical, Open Graph и Twitter Card */
+function socialTags(site, page) {
+    const pageUrl = absolute(site, page.out);
+    const imageUrl = absolute(site, site.ogImage);
+    const lines = [];
+
+    if (pageUrl) lines.push(`    <link rel="canonical" href="${pageUrl}">`);
+
+    lines.push(
+        `    <meta property="og:type" content="${page.product ? 'product' : 'website'}">`,
+        `    <meta property="og:site_name" content="${esc(site.name)}">`,
+        `    <meta property="og:locale" content="ru_RU">`,
+        `    <meta property="og:title" content="${esc(page.title)}">`,
+        `    <meta property="og:description" content="${esc(page.description)}">`
+    );
+
+    if (pageUrl) lines.push(`    <meta property="og:url" content="${pageUrl}">`);
+
+    // og:image требует абсолютного адреса, поэтому только после указания домена
+    if (imageUrl) {
+        const productImage = page.product ? absolute(site, page.product.mainImage) : null;
+        lines.push(`    <meta property="og:image" content="${productImage || imageUrl}">`);
+    }
+
+    lines.push(
+        `    <meta name="twitter:card" content="summary_large_image">`,
+        `    <meta name="twitter:title" content="${esc(page.title)}">`,
+        `    <meta name="twitter:description" content="${esc(page.description)}">`
+    );
+
+    return lines.join('\n');
+}
+
+/** Микроразметка Schema.org */
+function structuredData(site, page) {
+    const blocks = [];
+    const pageUrl = absolute(site, page.out);
+
+    const organization = {
+        '@type': 'LocalBusiness',
+        name: site.name,
+        description: site.tagline,
+        telephone: [site.phone, site.phoneSecond].filter(Boolean),
+        email: site.email,
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: site.streetAddress,
+            addressLocality: site.locality,
+            addressRegion: site.region,
+            addressCountry: 'RU'
+        },
+        openingHours: site.openingHours,
+        foundingDate: site.foundingYear
+    };
+    if (site.url) {
+        organization.url = site.url.replace(/\/+$/, '');
+        organization.image = absolute(site, site.ogImage);
+    }
+
+    // организацию описываем на главной и контактах, чтобы не дублировать на всех страницах
+    if (page.active === 'index' || page.active === 'contacts') {
+        blocks.push(organization);
+    }
+
+    if (page.product) {
+        const product = {
+            '@type': 'Product',
+            name: page.product.title,
+            description: page.product.description,
+            category: 'Упаковочные материалы',
+            brand: { '@type': 'Brand', name: site.name }
+        };
+        const image = absolute(site, page.product.mainImage);
+        if (image) product.image = image;
+        if (page.product.sku) product.sku = page.product.sku;
+        // цены пока нет - предложение появится вместе с прайсом
+        if (page.product.price) {
+            product.offers = {
+                '@type': 'Offer',
+                price: page.product.price,
+                priceCurrency: 'RUB',
+                availability: 'https://schema.org/InStock'
+            };
+        }
+        blocks.push(product);
+
+        const crumbs = [
+            { name: 'Главная', file: 'index.html' },
+            { name: 'Упаковка', file: 'pages/packaging.html' },
+            { name: page.product.title, file: page.out }
+        ];
+        blocks.push({
+            '@type': 'BreadcrumbList',
+            itemListElement: crumbs.map((crumb, i) => {
+                const item = { '@type': 'ListItem', position: i + 1, name: crumb.name };
+                const url = absolute(site, crumb.file);
+                if (url) item.item = url;
+                return item;
+            })
+        });
+    }
+
+    if (!blocks.length) return '';
+
+    const json = blocks.length === 1
+        ? { '@context': 'https://schema.org', ...blocks[0] }
+        : { '@context': 'https://schema.org', '@graph': blocks };
+
+    void pageUrl;
+    return `    <script type="application/ld+json">\n${JSON.stringify(json, null, 4)
+        .split('\n').map((l) => '    ' + l).join('\n')}\n    </script>`;
+}
+
+const head = (site, page) => {
+    const { root, title, description } = page;
+    const ld = structuredData(site, page);
+
+    return `<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="${esc(description)}">
     <title>${esc(title)}</title>
+${socialTags(site, page)}
     <link rel="icon" type="image/png" href="${root}images/favicon.png">
     <link rel="stylesheet" href="${root}css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
+${ld ? ld + '\n' : ''}</head>
 <body>`;
+};
 
 const header = (site, { root, dir, active }) => {
     const items = site.nav.map((item) => {
