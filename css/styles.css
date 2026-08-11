@@ -2283,6 +2283,8 @@ section {
 }
 
 /* ===== Discount Popup ===== */
+/* Отступ снизу зависит от того, видна ли кнопка корзины:
+   класс .cart-visible вешает JS (см. ShoppingCart.updateCartButton) */
 .discount-popup {
     position: fixed;
     bottom: 120px;
@@ -2291,6 +2293,10 @@ section {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.discount-popup.cart-visible {
+    bottom: 200px;
 }
 
 .discount-popup.show {
@@ -2474,11 +2480,10 @@ section {
 /* Mobile adaptation for popup */
 @media (max-width: 640px) {
     .discount-popup {
-        bottom: 110px;
         right: 16px;
         left: 16px;
     }
-    
+
     .discount-popup-mini,
     .discount-popup-full {
         max-width: 100%;
@@ -2960,7 +2965,11 @@ section {
         right: 20px;
         left: 20px;
     }
-    
+
+    .discount-popup.cart-visible {
+        bottom: 240px;
+    }
+
     .discount-popup-mini {
         padding: 14px 18px;
     }
@@ -3045,9 +3054,13 @@ section {
     /* Popup снизу под кнопками */
     .discount-popup {
         top: auto;
-        bottom: 145px;
+        bottom: 80px;
         right: 16px;
         left: 16px;
+    }
+
+    .discount-popup.cart-visible {
+        bottom: 150px;
     }
     
     .discount-popup-mini {

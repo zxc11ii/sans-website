@@ -1,21 +1,54 @@
+// Корень сайта - вычисляется от пути к самому скрипту (js/script.js),
+// поэтому работает и в подпапке (GitHub Pages), и на любой глубине страницы
+const SITE_ROOT = (() => {
+    const el = document.currentScript || document.querySelector('script[src*="script.js"]');
+    const scriptUrl = new URL(el.getAttribute('src'), window.location.href);
+    return new URL('../', scriptUrl).href;
+})();
+
+// Приводит путь к картинке (../../images/..., /images/..., полный URL)
+// к виду "images/..." - такой путь не зависит от страницы и от адреса сайта,
+// поэтому его безопасно хранить в localStorage
+function assetPath(path) {
+    if (!path) return '';
+    const s = String(path);
+    // внешние картинки (например, из будущей CMS) оставляем как есть
+    if (/^https?:\/\//i.test(s)) return s;
+    const i = s.indexOf('images/');
+    if (i !== -1) return s.slice(i);
+    return s.replace(/^(\.\.\/)+/, '').replace(/^\.\//, '').replace(/^\//, '');
+}
+
+// Разворачивает путь из assetPath() в рабочий URL для текущей страницы
+function resolveAsset(path) {
+    const clean = assetPath(path);
+    return clean ? new URL(clean, SITE_ROOT).href : '';
+}
+
 // Mobile Menu Toggle
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
+function closeMobileMenu() {
+    if (!mobileMenuToggle) return;
+    navMenu.classList.remove('active');
+    mobileMenuToggle.classList.remove('active');
+    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+}
+
 if (mobileMenuToggle) {
+    mobileMenuToggle.setAttribute('aria-expanded', 'false');
     mobileMenuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileMenuToggle.classList.toggle('active');
+        const isOpen = navMenu.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active', isOpen);
+        mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
     });
 }
 
 // Close mobile menu when clicking on a link
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-    });
+    link.addEventListener('click', closeMobileMenu);
 });
 
 // Smooth scroll for anchor links
@@ -36,21 +69,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Header scroll effect
-let lastScroll = 0;
+// Header scroll effect + кнопка "Наверх" - один обработчик на rAF,
+// чтобы не считать стили на каждом событии скролла
 const header = document.querySelector('.header');
+const scrollToTopBtn = document.getElementById('scrollToTop');
+let scrollTicking = false;
+
+function handleScroll() {
+    const currentScroll = window.pageYOffset;
+
+    if (header) {
+        header.style.boxShadow = currentScroll > 100
+            ? '0 4px 12px rgba(0, 0, 0, 0.1)'
+            : '0 2px 4px rgba(0, 0, 0, 0.05)';
+    }
+
+    if (scrollToTopBtn) {
+        scrollToTopBtn.classList.toggle('visible', currentScroll > 300);
+    }
+
+    scrollTicking = false;
+}
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.05)';
+    if (!scrollTicking) {
+        scrollTicking = true;
+        window.requestAnimationFrame(handleScroll);
     }
-    
-    lastScroll = currentScroll;
-});
+}, { passive: true });
+
+if (scrollToTopBtn) {
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
 // Form submission
 const contactForm = document.getElementById('contactForm');
@@ -155,28 +207,6 @@ if (phoneInput) {
     });
 }
 
-// Scroll to Top Button
-const scrollToTopBtn = document.getElementById('scrollToTop');
-
-if (scrollToTopBtn) {
-    // Show/hide button based on scroll position
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
-    });
-
-    // Scroll to top when button is clicked
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
 // Discount Popup for Product Pages
 const discountPopup = document.getElementById('discountPopup');
 const discountMini = document.getElementById('discountMini');
@@ -184,35 +214,49 @@ const discountClose = document.getElementById('discountClose');
 const discountCloseFull = document.getElementById('discountCloseFull');
 const discountForm = document.getElementById('discountForm');
 
+// Закрытый поп-ап не показываем повторно 7 дней
+const DISCOUNT_DISMISS_KEY = 'sansDiscountDismissedAt';
+const DISCOUNT_DISMISS_DAYS = 7;
+
+function isDiscountDismissed() {
+    const saved = Number(localStorage.getItem(DISCOUNT_DISMISS_KEY));
+    if (!saved) return false;
+    return Date.now() - saved < DISCOUNT_DISMISS_DAYS * 24 * 60 * 60 * 1000;
+}
+
+function dismissDiscountPopup() {
+    discountPopup.classList.remove('show', 'expanded');
+    localStorage.setItem(DISCOUNT_DISMISS_KEY, String(Date.now()));
+}
+
 if (discountPopup) {
     // Check if we're on a product page
     const isProductPage = window.location.pathname.includes('/products/');
-    
-    if (isProductPage) {
+
+    if (isProductPage && !isDiscountDismissed()) {
         // Random delay between 8-9 seconds
         const delay = Math.floor(Math.random() * (9000 - 8000 + 1)) + 8000;
-        
-        // Always show popup after delay on product pages
+
         setTimeout(() => {
             discountPopup.classList.add('show');
         }, delay);
     }
-    
+
     // Click on mini popup to expand
     discountMini.addEventListener('click', () => {
         discountPopup.classList.add('expanded');
     });
-    
+
     // Close mini popup (X button on mini) - closes completely
     discountClose.addEventListener('click', (e) => {
         e.stopPropagation();
-        discountPopup.classList.remove('show', 'expanded');
+        dismissDiscountPopup();
     });
-    
+
     // Close full popup (X button on full) - closes completely
     discountCloseFull.addEventListener('click', (e) => {
         e.stopPropagation();
-        discountPopup.classList.remove('show', 'expanded');
+        dismissDiscountPopup();
     });
     
     // Click outside full popup - collapse to mini (don't close)
@@ -242,9 +286,9 @@ if (discountPopup) {
             
             // Here you would send data to server
             alert(`Спасибо за заявку, ${formData.name}!\n\nМы свяжемся с вами в ближайшее время и расскажем о специальном предложении.\n\nТелефон: ${formData.phone}`);
-            
-            // Hide popup
-            discountPopup.classList.remove('show', 'expanded');
+
+            // Hide popup (и больше не показываем - заявка уже оставлена)
+            dismissDiscountPopup();
             
             // Reset form
             discountForm.reset();
@@ -285,7 +329,21 @@ class ShoppingCart {
     
     loadCart() {
         const saved = localStorage.getItem('sansCart');
-        return saved ? JSON.parse(saved) : [];
+        if (!saved) return [];
+
+        try {
+            const items = JSON.parse(saved);
+            if (!Array.isArray(items)) return [];
+            // Старые корзины хранили путь относительно страницы товара
+            // (../../images/...) - он ломался при открытии корзины с другой
+            // страницы, поэтому приводим все пути к абсолютным
+            return items.map(item => ({
+                ...item,
+                image: assetPath(item.image)
+            }));
+        } catch (e) {
+            return [];
+        }
     }
     
     saveCart() {
@@ -301,7 +359,7 @@ class ShoppingCart {
             this.items.push({
                 id: product.id,
                 name: product.name,
-                image: product.image,
+                image: assetPath(product.image),
                 quantity: 1
             });
         }
@@ -341,43 +399,20 @@ class ShoppingCart {
         const cartBadge = document.getElementById('cartBadge');
         const discountPopup = document.querySelector('.discount-popup');
         
-        if (cartButton) {
-            if (count > 0) {
-                cartButton.classList.add('visible');
-                if (cartBadge) {
-                    cartBadge.textContent = count;
-                }
-                // Поднимаем popup выше когда корзина появилась
-                if (discountPopup) {
-                    // Проверяем размер экрана
-                    if (window.innerWidth <= 640) {
-                        // Mobile - popup снизу под кнопками, опускаем ниже
-                        discountPopup.style.bottom = '150px';
-                    } else if (window.innerWidth <= 968) {
-                        // Tablet
-                        discountPopup.style.bottom = '240px';
-                    } else {
-                        // Desktop
-                        discountPopup.style.bottom = '200px';
-                    }
-                }
-            } else {
-                cartButton.classList.remove('visible');
-                // Возвращаем popup на исходную позицию когда корзина пустая
-                if (discountPopup) {
-                    // Проверяем размер экрана
-                    if (window.innerWidth <= 640) {
-                        // Mobile - popup снизу, ближе к кнопке наверх
-                        discountPopup.style.bottom = '80px';
-                    } else if (window.innerWidth <= 968) {
-                        // Tablet
-                        discountPopup.style.bottom = '160px';
-                    } else {
-                        // Desktop
-                        discountPopup.style.bottom = '120px';
-                    }
-                }
-            }
+        if (!cartButton) return;
+
+        const hasItems = count > 0;
+        cartButton.classList.toggle('visible', hasItems);
+
+        if (cartBadge) {
+            cartBadge.textContent = count;
+        }
+
+        // Когда кнопка корзины появляется, поп-ап скидки поднимается выше,
+        // чтобы её не перекрывать. Отступы заданы в CSS для каждого
+        // брейкпоинта (.discount-popup / .discount-popup.cart-visible)
+        if (discountPopup) {
+            discountPopup.classList.toggle('cart-visible', hasItems);
         }
     }
     
@@ -396,6 +431,7 @@ class ShoppingCart {
             border-radius: 4px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             z-index: 9999;
+            max-width: calc(100vw - 60px);
             animation: slideInRight 0.3s ease;
         `;
         
@@ -427,7 +463,7 @@ class ShoppingCart {
             cartItemsContainer.innerHTML = this.items.map(item => `
                 <div class="cart-item" data-id="${item.id}">
                     <div class="cart-item-image">
-                        ${item.image ? `<img src="${item.image}" alt="${item.name}">` : ''}
+                        ${item.image ? `<img src="${resolveAsset(item.image)}" alt="${item.name}" loading="lazy">` : ''}
                     </div>
                     <div class="cart-item-info">
                         <h3>${item.name}</h3>
@@ -696,15 +732,22 @@ document.addEventListener('DOMContentLoaded', () => {
     window.shoppingCart = new ShoppingCart();
 });
 
-// Handle window resize for responsive popup position
-let resizeTimer;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-        if (window.shoppingCart) {
-            window.shoppingCart.updateCartButton();
-        }
-    }, 250);
+// Закрытие по Esc: сначала модалки корзины, затем мобильное меню
+document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+
+    const orderModal = document.getElementById('cartOrderModal');
+    const cartModal = document.getElementById('cartModal');
+
+    if (orderModal && orderModal.classList.contains('active')) {
+        window.shoppingCart.closeOrderForm();
+    } else if (cartModal && cartModal.classList.contains('active')) {
+        window.shoppingCart.closeCart();
+    } else if (discountPopup && discountPopup.classList.contains('expanded')) {
+        discountPopup.classList.remove('expanded');
+    } else if (navMenu && navMenu.classList.contains('active')) {
+        closeMobileMenu();
+    }
 });
 
 // Add CSS animations for notifications
