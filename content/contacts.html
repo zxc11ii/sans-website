@@ -1,0 +1,119 @@
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Контакты</h1>
+            <p>Свяжитесь с нами удобным для вас способом</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Наши контакты</h2>
+                    <p class="contact-intro">
+                        Если вас заинтересовала наша продукция, пожалуйста, обратитесь за консультацией к нашим специалистам. Мы работаем с понедельника по пятницу с 9:00 до 18:00.
+                    </p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <img src="{{root}}images/icons/icon-phone.svg" alt="" class="contact-icon-img">
+                            <div>
+                                <h4>Телефоны</h4>
+                                <a href="tel:{{phoneHref}}" class="contact-link">{{phone}}</a>
+                                <a href="tel:{{phoneSecondHref}}" class="contact-link">{{phoneSecond}}</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <img src="{{root}}images/icons/send.svg" alt="" class="contact-icon-img">
+                            <div>
+                                <h4>Чат в мессенджерах</h4>
+                                <a href="tel:{{phoneMessengerHref}}" class="contact-link">{{phoneMessenger}}</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <img src="{{root}}images/icons/icon-documents.svg" alt="" class="contact-icon-img">
+                            <div>
+                                <h4>Электронная почта</h4>
+                                <a href="mailto:{{email}}" class="contact-link">{{email}}</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <img src="{{root}}images/icons/icon-location.svg" alt="" class="contact-icon-img">
+                            <div>
+                                <h4>Адрес</h4>
+                                <p>{{address}}</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <img src="{{root}}images/icons/icon-clock.svg" alt="" class="contact-icon-img">
+                            <div>
+                                <h4>Режим работы</h4>
+                                <p>Пн-Пт: 9:00 - 18:00<br>Сб-Вс: выходной</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Оформить заказ</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Ваше имя *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Телефон *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" placeholder="Комментарий к заказу"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
+                        <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section class="delivery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Доставка</span>
+                <h2 class="section-title">Условия доставки</h2>
+            </div>
+            <div class="delivery-grid">
+                <div class="delivery-card">
+                    <img src="{{root}}images/icons/icon-transport.svg" alt="" class="delivery-icon-img">
+                    <h3>Доставка по Перми</h3>
+                    <p><strong>Бесплатно</strong> при сумме заказа от 2000 ₽</p>
+                    <p class="delivery-note">исключая отдаленные районы</p>
+                    <p>Доставка выполняется в будние дни (ПН-ПТ) с 10:00 до 17:00</p>
+                </div>
+                <div class="delivery-card">
+                    <img src="{{root}}images/icons/icon-location.svg" alt="" class="delivery-icon-img">
+                    <h3>Самовывоз</h3>
+                    <p>{{address}}</p>
+                    <p>Режим работы: Пн-Пт с 9:00 до 18:00</p>
+                </div>
+                <div class="delivery-card">
+                    <img src="{{root}}images/icons/icon-transport.svg" alt="" class="delivery-icon-img">
+                    <h3>Доставка в регионы</h3>
+                    <p>Отправка транспортными компаниями:</p>
+                    <p class="delivery-note">Деловые линии, Байкал-сервис, ПЭК, КИТ, СДЭК, DPD, Яндекс, Экспресс-авто, Луч</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Как нас найти</h2>
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab29e16e1dca3c70b7b31c6ca7091dd0c07b78f2432a717ecccd85f8aecb77497&amp;source=constructor" width="100%" height="400" frameborder="0" loading="lazy" title="Карта проезда: {{address}}"></iframe>
+            </div>
+        </div>
+    </section>

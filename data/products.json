@@ -1,0 +1,2142 @@
+[
+  {
+    "slug": "scotch",
+    "title": "Скотч упаковочный",
+    "pageTitle": "Скотч упаковочный - САНС",
+    "metaDescription": "Скотч упаковочный - прозрачный, коричневый, белый. Ширина 9-150мм, длина 50-990м",
+    "shortDescription": "Прозрачный, коричневый, белый. Ширина 9-150мм, длина 50-990м",
+    "cardTitle": "Скотч упаковочный",
+    "description": "Прозрачный, коричневый, белый скотч для упаковки. Надежное склеивание картонных коробок и других упаковочных материалов.",
+    "image": "images/products/scotch.jpg",
+    "mainImage": "images/products/scotch.jpg",
+    "orderUrl": "https://sans59.ru/ishop/18",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Ширина",
+        "value": "9-150 мм"
+      },
+      {
+        "label": "Длина",
+        "value": "50-990 м"
+      },
+      {
+        "label": "Цвета",
+        "value": "прозрачный, коричневый, белый"
+      },
+      {
+        "label": "Материал",
+        "value": "полипропилен"
+      },
+      {
+        "label": "Применение",
+        "value": "упаковка, маркировка, склеивание"
+      }
+    ],
+    "features": [
+      "Высокая прочность на разрыв",
+      "Надежное склеивание",
+      "Устойчив к влаге",
+      "Не оставляет следов",
+      "Подходит для ручной и машинной упаковки"
+    ],
+    "variants": [
+      {
+        "id": "scotch-50x66-clear",
+        "name": "Скотч 50мм х 66м прозрачный",
+        "fullName": "Клейкая упаковочная лента скотч 50мм х 66м на каучуковой основе, цвет - прозрачный",
+        "image": "images/products/scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "scotch-48x132-clear",
+        "name": "Скотч 48мм х 132м прозрачный",
+        "fullName": "Клейкая упаковочная лента скотч 48мм х 132м, цвет - прозрачный",
+        "image": "images/products/scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "scotch-48x60-fragile",
+        "name": "Скотч 48мм х 60м Осторожно хрупкое",
+        "fullName": "Скотч 48мм * 60м с надписью Осторожно хрупкое",
+        "image": "images/products/warning-scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "scotch-48x66-clear",
+        "name": "Скотч 48мм х 66м прозрачный",
+        "fullName": "Клейкая упаковочная лента скотч 48мм х 66м, цвет - прозрачный",
+        "image": "images/products/scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "scotch-48x66-yellow",
+        "name": "Скотч 48мм х 66м жёлтый",
+        "fullName": "Клейкая упаковочная лента скотч 48мм х 66м, цвет - жёлтый",
+        "image": "images/products/scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "scotch-48x40-metal",
+        "name": "Скотч 48мм х 40м металлизированный",
+        "fullName": "Клейкая металлизированная лента скотч 48мм х 40м",
+        "image": "images/products/scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "scotch-9x66-clip",
+        "name": "Скотч 9мм х 66м для клипсатора",
+        "fullName": "Клейкая упаковочная лента скотч 9мм х 66м для клипсатора (заклеивателя горловины пакета)",
+        "image": "images/products/scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "scotch-12x66-clip",
+        "name": "Скотч 12мм х 66м для клипсатора",
+        "fullName": "Клейкая упаковочная лента скотч 12мм х 66м для клипсатора (заклеивателя горловины пакета)",
+        "image": "images/products/scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "scotch-72x66",
+        "name": "Скотч 72мм х 66м",
+        "fullName": "Клейкая упаковочная лента скотч 72мм х 66м",
+        "image": "images/products/scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "scotch-48x150-clear",
+        "name": "Скотч 48мм х 150м прозрачный",
+        "fullName": "Клейкая упаковочная лента скотч 48мм х 150м, цвет - прозрачный",
+        "image": "images/products/scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "scotch-48x150-brown",
+        "name": "Скотч 48мм х 150м коричневый",
+        "fullName": "Клейкая упаковочная лента скотч 48мм х 150м, цвет - коричневый/тёмный",
+        "image": "images/products/scotch.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "branded-scotch",
+      "warning-scotch",
+      "double-sided"
+    ]
+  },
+  {
+    "slug": "branded-scotch",
+    "title": "Брендированный скотч",
+    "pageTitle": "Брендированный скотч - САНС",
+    "metaDescription": "Брендированный скотч с вашим логотипом. Поверхностная и межслойная печать",
+    "shortDescription": "С вашим логотипом. Поверхностная и межслойная печать",
+    "cardTitle": "Брендированный скотч",
+    "description": "Упаковочная лента с вашим логотипом - эффективный инструмент брендинга и защиты от подделок. Поверхностная и межслойная печать.",
+    "image": "images/products/branded-scotch.jpg",
+    "mainImage": "images/products/branded-scotch.jpg",
+    "orderUrl": "https://sans59.ru/ishop/56",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Печать",
+        "value": "поверхностная и межслойная"
+      },
+      {
+        "label": "Цветность",
+        "value": "до 6 цветов"
+      },
+      {
+        "label": "Ширина",
+        "value": "25-75 мм"
+      },
+      {
+        "label": "Длина",
+        "value": "50-990 м"
+      },
+      {
+        "label": "Минимальный тираж",
+        "value": "от 100 рулонов"
+      }
+    ],
+    "features": [
+      "Узнаваемость бренда",
+      "Защита от подделок",
+      "Рекламный эффект",
+      "Контроль вскрытия упаковки",
+      "Любой дизайн и логотип"
+    ],
+    "variants": [],
+    "related": [
+      "scotch",
+      "warning-scotch",
+      "labels"
+    ]
+  },
+  {
+    "slug": "warning-scotch",
+    "title": "Скотч с надписью",
+    "pageTitle": "Скотч с надписью - САНС",
+    "metaDescription": "Скотч с надписью ХРУПКОЕ, СТЕКЛО, АКЦИЯ, ПОДАРОК",
+    "shortDescription": "\"ХРУПКОЕ\", \"СТЕКЛО\", \"АКЦИЯ\", \"ПОДАРОК\"",
+    "cardTitle": "Скотч с надписью",
+    "description": "Упаковочная лента с предупреждающими и информационными надписями для маркировки грузов.",
+    "image": "images/products/warning-scotch.jpg",
+    "mainImage": "images/products/warning-scotch.jpg",
+    "orderUrl": "https://sans59.ru/ishop/45",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Надписи",
+        "value": "\"ХРУПКОЕ\", \"СТЕКЛО\", \"АКЦИЯ\", \"ПОДАРОК\""
+      },
+      {
+        "label": "Цвета",
+        "value": "красный, желтый, белый на прозрачной основе"
+      },
+      {
+        "label": "Ширина",
+        "value": "48-50 мм"
+      },
+      {
+        "label": "Длина",
+        "value": "66-100 м"
+      },
+      {
+        "label": "Материал",
+        "value": "полипропилен"
+      }
+    ],
+    "features": [
+      "Яркая заметная маркировка",
+      "Предупреждение о хрупком грузе",
+      "Акционные надписи для промо",
+      "Надежное склеивание",
+      "Готовые варианты надписей"
+    ],
+    "variants": [
+      {
+        "id": "warning-scotch-48x60-fragile",
+        "name": "Скотч 48мм х 60м Осторожно хрупкое",
+        "fullName": "Скотч 48мм * 60м с надписью Осторожно хрупкое",
+        "image": "images/products/warning-scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "warning-scotch-50x66-glass",
+        "name": "Скотч 50мм х 66м Осторожно стекло",
+        "fullName": "Скотч 50мм * 66м с надписью Осторожно стекло",
+        "image": "images/products/warning-scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "warning-scotch-50x66-sale",
+        "name": "Скотч 50мм х 66м Акция",
+        "fullName": "Скотч 50мм * 66м с надписью Акция",
+        "image": "images/products/warning-scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "warning-scotch-50x66-gift",
+        "name": "Скотч 50мм х 66м Подарок",
+        "fullName": "Скотч 50мм * 66м с надписью Подарок",
+        "image": "images/products/warning-scotch.jpg",
+        "photo": null
+      },
+      {
+        "id": "warning-scotch-25x66-sale",
+        "name": "Скотч 25мм х 66м Акция",
+        "fullName": "Скотч 25мм * 66м с надписью Акция",
+        "image": "images/products/warning-scotch.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "scotch",
+      "branded-scotch",
+      "labels"
+    ]
+  },
+  {
+    "slug": "masking-tape",
+    "title": "Малярный скотч",
+    "pageTitle": "Малярный скотч - САНС",
+    "metaDescription": "Малярный скотч бумажный, ширина 19-50мм, длина 12-50м",
+    "shortDescription": "Бумажный, ширина 19-50мм, длина 12-50м",
+    "cardTitle": "Малярный скотч",
+    "description": "Бумажный малярный скотч для защиты поверхностей при покраске. Легко удаляется, не оставляет следов.",
+    "image": "images/products/masking-tape.jpg",
+    "mainImage": "images/products/masking-tape.jpg",
+    "orderUrl": "https://sans59.ru/ishop/64",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Ширина",
+        "value": "19 мм, 25 мм, 30 мм, 38 мм, 48 мм, 50 мм"
+      },
+      {
+        "label": "Длина",
+        "value": "12 м, 20 м, 25 м, 40 м, 50 м"
+      },
+      {
+        "label": "Толщина",
+        "value": "125 мкм, 140 мкм"
+      },
+      {
+        "label": "Возможные цвета",
+        "value": "белый, бежевый"
+      },
+      {
+        "label": "Основа",
+        "value": "бумага"
+      },
+      {
+        "label": "Клей",
+        "value": "каучуковый"
+      },
+      {
+        "label": "Температура",
+        "value": "до +80°C"
+      }
+    ],
+    "features": [
+      "Легко отрывается руками",
+      "Не оставляет следов клея",
+      "Защищает от краски",
+      "Термостойкий",
+      "Для всех типов поверхностей"
+    ],
+    "variants": [
+      {
+        "id": "masking-tape-25x25",
+        "name": "Скотч малярный бумажный 25мм 25м",
+        "fullName": "Скотч малярный бумажный 25мм 25м",
+        "image": "images/products/masking-tape.jpg",
+        "photo": null
+      },
+      {
+        "id": "masking-tape-48x25",
+        "name": "Скотч малярный бумажный 48мм 25м",
+        "fullName": "Скотч малярный бумажный 48мм 25м",
+        "image": "images/products/masking-tape.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "scotch",
+      "double-sided",
+      "labels"
+    ]
+  },
+  {
+    "slug": "double-sided",
+    "title": "Двусторонний скотч",
+    "pageTitle": "Двусторонний скотч - САНС",
+    "metaDescription": "Двусторонний скотч на полипропиленовой, тканевой и вспененной основе",
+    "shortDescription": "На полипропиленовой, тканевой и вспененной основе",
+    "cardTitle": "Двусторонний скотч",
+    "description": "Клейкая лента с липким слоем с обеих сторон. Для склеивания различных материалов без видимых следов крепления.",
+    "image": "images/products/double-sided.jpg",
+    "mainImage": "images/products/double-sided.jpg",
+    "orderUrl": "https://sans59.ru/ishop/48",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Основа",
+        "value": "полипропилен, ткань, вспененный материал"
+      },
+      {
+        "label": "Ширина",
+        "value": "9-50 мм"
+      },
+      {
+        "label": "Длина",
+        "value": "5-50 м"
+      },
+      {
+        "label": "Толщина",
+        "value": "0,1-3 мм"
+      },
+      {
+        "label": "Применение",
+        "value": "монтаж, склеивание, фиксация"
+      }
+    ],
+    "features": [
+      "Невидимое крепление",
+      "Сильная адгезия",
+      "Разные типы основ",
+      "Для любых поверхностей",
+      "Влагостойкость"
+    ],
+    "variants": [
+      {
+        "id": "double-sided-foam-12x2",
+        "name": "Двусторонний скотч на вспененной основе 12мм x 2м",
+        "fullName": "Двусторонний скотч на вспененной основе 12мм x 2м",
+        "image": "images/products/double-sided.jpg",
+        "photo": null
+      },
+      {
+        "id": "double-sided-foam-19x2",
+        "name": "Двусторонний скотч на вспененной основе 19мм x 2м",
+        "fullName": "Двусторонний скотч на вспененной основе 19мм x 2м",
+        "image": "images/products/double-sided.jpg",
+        "photo": null
+      },
+      {
+        "id": "double-sided-fabric-12x5",
+        "name": "Двусторонний скотч на тканевой основе 12мм x 5м",
+        "fullName": "Двусторонний скотч на тканевой основе 12мм x 5м",
+        "image": "images/products/double-sided.jpg",
+        "photo": null
+      },
+      {
+        "id": "double-sided-fabric-25x5",
+        "name": "Двусторонний скотч на тканевой основе 25мм x 5м",
+        "fullName": "Двусторонний скотч на тканевой основе 25мм x 5м",
+        "image": "images/products/double-sided.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "scotch",
+      "masking-tape",
+      "labels"
+    ]
+  },
+  {
+    "slug": "labels",
+    "title": "Этикетки самоклеящиеся",
+    "pageTitle": "Этикетки самоклеящиеся - САНС",
+    "metaDescription": "Этикетки самоклеящиеся бумажные и синтетические. Более 200 типоразмеров",
+    "shortDescription": "Бумажные и синтетические. Более 200 типоразмеров",
+    "cardTitle": "Этикетки самоклеящиеся",
+    "description": "Широкий выбор этикеток для маркировки товаров, упаковки и складского учета. Более 200 типоразмеров в наличии.",
+    "image": "images/products/labels.jpg",
+    "mainImage": "images/products/labels.jpg",
+    "orderUrl": "https://sans59.ru/ishop/55",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Материал",
+        "value": "бумага, полипропилен, полиэстер"
+      },
+      {
+        "label": "Размеры",
+        "value": "более 200 типоразмеров"
+      },
+      {
+        "label": "Печать",
+        "value": "термотрансферная, термопечать"
+      },
+      {
+        "label": "Намотка",
+        "value": "в рулонах по 500-3000 шт"
+      },
+      {
+        "label": "Применение",
+        "value": "штрихкоды, адресные, ценники"
+      }
+    ],
+    "features": [
+      "Огромный выбор размеров",
+      "Для любых принтеров",
+      "Бумажные и синтетические",
+      "Влагостойкие варианты",
+      "Быстрая отгрузка со склада"
+    ],
+    "variants": [
+      {
+        "id": "label-58-30-termo-eco",
+        "name": "Этикетка 58мм 30мм термоЭКО",
+        "fullName": "Этикетка 58мм 30мм термоЭКО",
+        "image": "images/products/labels.jpg",
+        "photo": null
+      },
+      {
+        "id": "label-58-30-termo-eco-print",
+        "name": "Этикетка 58мм 30мм термоЭКО с принтом",
+        "fullName": "Этикетка 58мм 30мм термоЭКО с принтом",
+        "image": "images/products/labels.jpg",
+        "photo": null
+      },
+      {
+        "id": "label-58-40-termo-eco",
+        "name": "Этикетка 58мм 40мм термоЭКО",
+        "fullName": "Этикетка 58мм 40мм термоЭКО",
+        "image": "images/products/labels.jpg",
+        "photo": null
+      },
+      {
+        "id": "label-58-40-termo-eco-print",
+        "name": "Этикетка 58мм 40мм термоЭКО с принтом",
+        "fullName": "Этикетка 58мм 40мм термоЭКО с принтом",
+        "image": "images/products/labels.jpg",
+        "photo": null
+      },
+      {
+        "id": "label-58-60-termo-eco",
+        "name": "Этикетка 58мм 60мм термоЭКО",
+        "fullName": "Этикетка 58мм 60мм термоЭКО",
+        "image": "images/products/labels.jpg",
+        "photo": null
+      },
+      {
+        "id": "label-58-80-termo-eco",
+        "name": "Этикетка 58мм 80мм термоЭКО",
+        "fullName": "Этикетка 58мм 80мм термоЭКО",
+        "image": "images/products/labels.jpg",
+        "photo": null
+      },
+      {
+        "id": "label-75-120-termo-eco",
+        "name": "Этикетка 75мм 120мм термоЭКО",
+        "fullName": "Этикетка 75мм 120мм термоЭКО",
+        "image": "images/products/labels.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "branded-scotch",
+      "warning-scotch",
+      "bopp-film"
+    ]
+  },
+  {
+    "slug": "stretch-film",
+    "title": "Стрейч-плёнка",
+    "pageTitle": "Стрейч-плёнка - САНС",
+    "metaDescription": "Стрейч-плёнка для ручной и машинной упаковки. Прозрачная, черная, белая",
+    "shortDescription": "Для ручной и машинной упаковки. Прозрачная, черная, белая",
+    "cardTitle": "Стрейч-плёнка",
+    "description": "Эластичная полиэтиленовая плёнка для паллетирования грузов. Надежная фиксация и защита от повреждений при транспортировке.",
+    "image": "images/products/stretch-film.jpg",
+    "mainImage": "images/products/stretch-film.jpg",
+    "orderUrl": "https://sans59.ru/ishop/29",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Способ упаковки",
+        "value": "ручная и машинная"
+      },
+      {
+        "label": "Ширина",
+        "value": "500 мм (ручная), 500 мм (машинная)"
+      },
+      {
+        "label": "Толщина",
+        "value": "17-23 мкм"
+      },
+      {
+        "label": "Вес рулона",
+        "value": "2-17 кг"
+      },
+      {
+        "label": "Цвета",
+        "value": "прозрачная, черная, белая"
+      }
+    ],
+    "features": [
+      "Высокая эластичность",
+      "Прочность на разрыв",
+      "Защита от влаги и пыли",
+      "Экономичный расход",
+      "Разные варианты намотки"
+    ],
+    "variants": [
+      {
+        "id": "stretch-125-23-primary",
+        "name": "Стрейч плёнка 125мм*23мкм, первичное сырьё",
+        "fullName": "Стрейч плёнка 125мм*23мкм, первичное сырьё",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-450-17-primary",
+        "name": "Стрейч плёнка 450мм*17мкм, первичное сырьё",
+        "fullName": "Стрейч плёнка 450мм*17мкм, первичное сырьё",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-500-12-primary",
+        "name": "Стрейч плёнка 500мм*12мкм, первичное сырьё",
+        "fullName": "Стрейч плёнка 500мм*12мкм, первичное сырьё",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-500-15-primary",
+        "name": "Стрейч плёнка 500мм*15мкм, первичное сырьё",
+        "fullName": "Стрейч плёнка 500мм*15мкм, первичное сырьё",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-500-17-primary",
+        "name": "Стрейч плёнка 500мм*17мкм, первичное сырьё",
+        "fullName": "Стрейч плёнка 500мм*17мкм, первичное сырьё",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-500-20-primary",
+        "name": "Стрейч плёнка 500мм*20мкм, первичное сырьё",
+        "fullName": "Стрейч плёнка 500мм*20мкм, первичное сырьё",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-500-23-white",
+        "name": "Стрейч плёнка 500мм*23мкм, первичное сырьё, белая",
+        "fullName": "Стрейч плёнка 500мм*23мкм, первичное сырьё, белая",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-500-23-black",
+        "name": "Стрейч плёнка 500мм*23мкм, первичное сырьё, черная",
+        "fullName": "Стрейч плёнка 500мм*23мкм, первичное сырьё, черная",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-500-23-primary",
+        "name": "Стрейч плёнка 500мм*23мкм, первичное сырьё",
+        "fullName": "Стрейч плёнка 500мм*23мкм, первичное сырьё",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-500-23-secondary",
+        "name": "Стрейч плёнка 500мм*23мкм, вторичное сырьё, 1 Сорт",
+        "fullName": "Стрейч плёнка 500мм*23мкм, вторичное сырьё, 1 Сорт",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-500-23-machine-1",
+        "name": "Стрейч плёнка 500мм*23мкм, первичное сырьё, для машинного использования",
+        "fullName": "Стрейч плёнка 500мм*23мкм, первичное сырьё, для машинного использования",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "stretch-500-23-machine-2",
+        "name": "Стрейч плёнка 500мм*23мкм, первичное сырьё, для машинного использования",
+        "fullName": "Стрейч плёнка 500мм*23мкм, первичное сырьё, для машинного использования",
+        "image": "images/products/stretch-film.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "bubble-wrap",
+      "shrink-pvc",
+      "pe-film"
+    ]
+  },
+  {
+    "slug": "food-film",
+    "title": "Пищевая плёнка",
+    "pageTitle": "Пищевая плёнка - САНС",
+    "metaDescription": "Пищевая плёнка ПЭ/ПВХ для ручной упаковки и автоматических машин",
+    "shortDescription": "ПЭ/ПВХ для ручной упаковки и автоматических машин",
+    "cardTitle": "Пищевая плёнка",
+    "description": "Безопасная плёнка для упаковки пищевых продуктов. ПЭ и ПВХ варианты для ручной упаковки и автоматических машин.",
+    "image": "images/products/food-film.jpg",
+    "mainImage": "images/products/food-film.jpg",
+    "orderUrl": "https://sans59.ru/ishop/65",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Материал",
+        "value": "полиэтилен (ПЭ), поливинилхлорид (ПВХ)"
+      },
+      {
+        "label": "Ширина",
+        "value": "300-450 мм"
+      },
+      {
+        "label": "Длина",
+        "value": "200-1500 м"
+      },
+      {
+        "label": "Толщина",
+        "value": "8-12 мкм"
+      },
+      {
+        "label": "Применение",
+        "value": "упаковка продуктов, HoReCa"
+      }
+    ],
+    "features": [
+      "Пищевой сертификат",
+      "Сохраняет свежесть",
+      "Прозрачность",
+      "Для ручной и машинной упаковки",
+      "Не пропускает запахи"
+    ],
+    "variants": [],
+    "related": [
+      "stretch-film",
+      "vacuum-bags",
+      "zip-bags"
+    ]
+  },
+  {
+    "slug": "shrink-pvc",
+    "title": "Термоусадочная плёнка ПВХ",
+    "pageTitle": "Термоусадочная плёнка ПВХ - САНС",
+    "metaDescription": "Термоусадочная плёнка ПВХ. Ширина 200-550мм, толщина 15-25мкм",
+    "shortDescription": "Ширина 200-550мм, толщина 15-25мкм",
+    "cardTitle": "Термоусадочная плёнка ПВХ",
+    "description": "ПВХ плёнка для упаковки товаров методом термоусадки. Прозрачная, плотно облегает товар, защищает от влаги и пыли.",
+    "image": "images/products/shrink-pvc.jpg",
+    "mainImage": "images/products/shrink-pvc.jpg",
+    "orderUrl": "https://sans59.ru/ishop/36",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Ширина",
+        "value": "200-550 мм"
+      },
+      {
+        "label": "Толщина",
+        "value": "15-25 мкм"
+      },
+      {
+        "label": "Усадка",
+        "value": "45-55%"
+      },
+      {
+        "label": "Температура усадки",
+        "value": "120-180°C"
+      },
+      {
+        "label": "Применение",
+        "value": "упаковка коробок, бутылок, дисков"
+      }
+    ],
+    "features": [
+      "Высокая прозрачность",
+      "Равномерная усадка",
+      "Защита от вскрытия",
+      "Глянцевая поверхность",
+      "Экономичность"
+    ],
+    "variants": [
+      {
+        "id": "shrink-pvc-200x750x15",
+        "name": "Термоусадочная ПВХ плёнка 200мм*750м*15мкм (5,8 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 200мм*750м*15мкм (вес нетто - 5,8 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-250x600x15",
+        "name": "Термоусадочная ПВХ плёнка 250мм*600м*15мкм (5,9 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 250мм*600м*15мкм (вес нетто - 5,9 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-250x750x15",
+        "name": "Термоусадочная ПВХ плёнка 250мм*750м*15мкм (7,3 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 250мм*750м*15мкм (вес нетто - 7,3 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-250x630x19",
+        "name": "Термоусадочная ПВХ плёнка 250мм*630м*19мкм (7,8 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 250мм*630м*19мкм (вес нетто - 7,8 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-300x600x15",
+        "name": "Термоусадочная ПВХ плёнка 300мм*600м*15мкм (7,0 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 300мм*600м*15мкм (вес нетто - 7,0 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-300x750x15",
+        "name": "Термоусадочная ПВХ плёнка 300мм*750м*15мкм (8,7 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 300мм*750м*15мкм (вес нетто - 8,7 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-300x630x19",
+        "name": "Термоусадочная ПВХ плёнка 300мм*630м*19мкм (9,3 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 300мм*630м*19мкм (вес нетто - 9,3 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-350x600x15",
+        "name": "Термоусадочная ПВХ плёнка 350мм*600м*15мкм (8,2 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 350мм*600м*15мкм (вес нетто - 8,2 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-350x750x15",
+        "name": "Термоусадочная ПВХ плёнка 350мм*750м*15мкм (10,2 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 350мм*750м*15мкм (вес нетто - 10,2 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-350x630x19",
+        "name": "Термоусадочная ПВХ плёнка 350мм*630м*19мкм (10,9 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 350мм*630м*19мкм (вес нетто - 10,9 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-450x600x15-1",
+        "name": "Термоусадочная ПВХ плёнка 450мм*600м*15мкм (10,5 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 450мм*600м*15мкм (вес нетто - 10,5 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-450x750x15-1",
+        "name": "Термоусадочная ПВХ плёнка 450мм*750м*15мкм (13,1 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 450мм*750м*15мкм (вес нетто - 13,1 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-350x750x15-2",
+        "name": "Термоусадочная ПВХ плёнка 350мм*750м*15мкм (10,2 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 350мм*750м*15мкм (вес нетто - 10,2 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-350x630x19-2",
+        "name": "Термоусадочная ПВХ плёнка 350мм*630м*19мкм (10,9 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 350мм*630м*19мкм (вес нетто - 10,9 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-450x600x15-2",
+        "name": "Термоусадочная ПВХ плёнка 450мм*600м*15мкм (10,5 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 450мм*600м*15мкм (вес нетто - 10,5 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-450x750x15-2",
+        "name": "Термоусадочная ПВХ плёнка 450мм*750м*15мкм (13,1 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 450мм*750м*15мкм (вес нетто - 13,1 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-450x630x19",
+        "name": "Термоусадочная ПВХ плёнка 450мм*630м*19мкм (14,0 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 450мм*630м*19мкм (вес нетто - 14,0 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-450x480x25",
+        "name": "Термоусадочная ПВХ плёнка 450мм*480м*25мкм (14,0 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 450мм*480м*25мкм (вес нетто - 14,0 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-500x630x19",
+        "name": "Термоусадочная ПВХ плёнка 500мм*630м*19мкм (15,5 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 500мм*630м*19мкм (вес нетто - 15,5 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pvc-550x480x25",
+        "name": "Термоусадочная ПВХ плёнка 550мм*480м*25мкм (17,0 кг)",
+        "fullName": "Термоусадочная ПВХ плёнка 550мм*480м*25мкм (вес нетто - 17,0 кг)",
+        "image": "images/products/shrink-pvc.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "shrink-pof",
+      "shrink-pe",
+      "stretch-film"
+    ]
+  },
+  {
+    "slug": "shrink-pof",
+    "title": "Термоусадочная плёнка ПОФ",
+    "pageTitle": "Термоусадочная плёнка ПОФ - САНС",
+    "metaDescription": "Термоусадочная плёнка ПОФ универсальная для пищевых и непищевых товаров",
+    "shortDescription": "Универсальная для пищевых и непищевых товаров",
+    "cardTitle": "Термоусадочная плёнка ПОФ",
+    "description": "Полиолефиновая термоусадочная плёнка нового поколения. Универсальная для пищевых и непищевых товаров.",
+    "image": "images/products/shrink-pof.jpg",
+    "mainImage": "images/products/shrink-pof.jpg",
+    "orderUrl": "https://sans59.ru/ishop/63",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Материал",
+        "value": "полиолефин"
+      },
+      {
+        "label": "Ширина",
+        "value": "250-1500 мм"
+      },
+      {
+        "label": "Толщина",
+        "value": "12-19 мкм"
+      },
+      {
+        "label": "Усадка",
+        "value": "до 75%"
+      },
+      {
+        "label": "Температура усадки",
+        "value": "130-170°C"
+      }
+    ],
+    "features": [
+      "Для пищевых продуктов",
+      "Высокая прочность",
+      "Отличная прозрачность",
+      "Морозостойкость",
+      "Экологичность"
+    ],
+    "variants": [
+      {
+        "id": "shrink-pof-200-750-15",
+        "name": "Термоусадочная ПОФ плёнка 200мм*750м*15мкм",
+        "fullName": "Термоусадочная ПОФ плёнка 200мм*750м*15мкм",
+        "image": "images/products/shrink-pof.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pof-250-750-15",
+        "name": "Термоусадочная ПОФ плёнка 250мм*750м*15мкм",
+        "fullName": "Термоусадочная ПОФ плёнка 250мм*750м*15мкм",
+        "image": "images/products/shrink-pof.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pof-300-750-15",
+        "name": "Термоусадочная ПОФ плёнка 300мм*750м*15мкм",
+        "fullName": "Термоусадочная ПОФ плёнка 300мм*750м*15мкм",
+        "image": "images/products/shrink-pof.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pof-350-750-15",
+        "name": "Термоусадочная ПОФ плёнка 350мм*750м*15мкм",
+        "fullName": "Термоусадочная ПОФ плёнка 350мм*750м*15мкм",
+        "image": "images/products/shrink-pof.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pof-400-750-15",
+        "name": "Термоусадочная ПОФ плёнка 400мм*750м*15мкм",
+        "fullName": "Термоусадочная ПОФ плёнка 400мм*750м*15мкм",
+        "image": "images/products/shrink-pof.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pof-450-750-15",
+        "name": "Термоусадочная ПОФ плёнка 450мм*750м*15мкм",
+        "fullName": "Термоусадочная ПОФ плёнка 450мм*750м*15мкм",
+        "image": "images/products/shrink-pof.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pof-500-750-15",
+        "name": "Термоусадочная ПОФ плёнка 500мм*750м*15мкм",
+        "fullName": "Термоусадочная ПОФ плёнка 500мм*750м*15мкм",
+        "image": "images/products/shrink-pof.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "shrink-pvc",
+      "shrink-pe",
+      "food-film"
+    ]
+  },
+  {
+    "slug": "shrink-pe",
+    "title": "Термоусадочная плёнка ПВД",
+    "pageTitle": "Термоусадочная плёнка ПВД - САНС",
+    "metaDescription": "Термоусадочная плёнка ПВД для групповой и паллетной упаковки",
+    "shortDescription": "Для групповой и паллетной упаковки",
+    "cardTitle": "Термоусадочная плёнка ПВД",
+    "description": "Полиэтиленовая термоусадочная плёнка для групповой упаковки и паллетирования. Высокая прочность и эластичность.",
+    "image": "images/products/shrink-pe.jpg",
+    "mainImage": "images/products/shrink-pe.jpg",
+    "orderUrl": "https://sans59.ru/ishop/69",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Материал",
+        "value": "полиэтилен высокого давления"
+      },
+      {
+        "label": "Ширина",
+        "value": "1000-3000 мм"
+      },
+      {
+        "label": "Толщина",
+        "value": "80-200 мкм"
+      },
+      {
+        "label": "Усадка",
+        "value": "до 40%"
+      },
+      {
+        "label": "Применение",
+        "value": "групповая, паллетная упаковка"
+      }
+    ],
+    "features": [
+      "Высокая прочность на разрыв",
+      "Стойкость к проколам",
+      "Защита от влаги",
+      "Для крупногабаритных грузов",
+      "Экономичность"
+    ],
+    "variants": [
+      {
+        "id": "shrink-pe-520-50-25",
+        "name": "Термоусадочная ПВД плёнка 520мм 50мкм 25кг",
+        "fullName": "Термоусадочная ПВД плёнка 520мм 50мкм 25кг",
+        "image": "images/products/shrink-pe.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pe-520-100-25",
+        "name": "Термоусадочная ПВД плёнка 520мм 100мкм 25кг",
+        "fullName": "Термоусадочная ПВД плёнка 520мм 100мкм 25кг",
+        "image": "images/products/shrink-pe.jpg",
+        "photo": null
+      },
+      {
+        "id": "shrink-pe-custom",
+        "name": "Термоусадочная ПВД плёнка по индивидуальным параметрам",
+        "fullName": "Термоусадочная ПВД плёнка по индивидуальным параметрам",
+        "image": "images/products/shrink-pe.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "stretch-film",
+      "shrink-pof",
+      "pe-film"
+    ]
+  },
+  {
+    "slug": "bopp-film",
+    "title": "Полипропиленовая плёнка БОПП",
+    "pageTitle": "Полипропиленовая плёнка БОПП - САНС",
+    "metaDescription": "Полипропиленовая плёнка БОПП для горизонтального и вертикального способа упаковки",
+    "shortDescription": "Для горизонтального и вертикального способа упаковки",
+    "cardTitle": "Полипропиленовая плёнка БОПП",
+    "description": "Биаксиально ориентированная полипропиленовая плёнка для автоматической упаковки. Прозрачная, глянцевая поверхность.",
+    "image": "images/products/bopp-film.jpg",
+    "mainImage": "images/products/bopp-film.jpg",
+    "orderUrl": "https://sans59.ru/ishop/62",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Материал",
+        "value": "биаксиально ориентированный полипропилен"
+      },
+      {
+        "label": "Ширина",
+        "value": "200-600 мм"
+      },
+      {
+        "label": "Толщина",
+        "value": "20-40 мкм"
+      },
+      {
+        "label": "Способ упаковки",
+        "value": "горизонтальный и вертикальный"
+      },
+      {
+        "label": "Применение",
+        "value": "конфеты, печенье, хлебобулочные изделия"
+      }
+    ],
+    "features": [
+      "Высокая прозрачность и блеск",
+      "Защита от влаги",
+      "Хорошая печать",
+      "Прочность",
+      "Для автоматических линий"
+    ],
+    "variants": [
+      {
+        "id": "bopp-film-160-35-pearl",
+        "name": "Плёнка упаковочная полипропиленовая 160мм 35мкм жемчужная белая",
+        "fullName": "Плёнка упаковочная полипропиленовая 160мм 35мкм (жемчужная) белая / перламутровая",
+        "image": "images/products/bopp-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "bopp-film-360-40-clear",
+        "name": "Плёнка упаковочная полипропиленовая 360мм 40мкм прозрачная",
+        "fullName": "Плёнка упаковочная полипропиленовая 360мм 40мкм, прозрачная",
+        "image": "images/products/bopp-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "bopp-film-360-60-lam",
+        "name": "Плёнка упаковочная ламинированная 360мм 60мкм прозрачная",
+        "fullName": "Плёнка упаковочная ламинированная 360мм 60мкм, прозрачная",
+        "image": "images/products/bopp-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "bopp-film-395-40-clear",
+        "name": "Плёнка упаковочная полипропиленовая 395мм 40мкм прозрачная",
+        "fullName": "Плёнка упаковочная полипропиленовая 395мм 40мкм, прозрачная",
+        "image": "images/products/bopp-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "bopp-film-400-25-clear",
+        "name": "Плёнка упаковочная полипропиленовая 400мм 25мкм прозрачная",
+        "fullName": "Плёнка упаковочная полипропиленовая 400мм 25мкм, прозрачная",
+        "image": "images/products/bopp-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "bopp-film-custom",
+        "name": "Плёнка упаковочная полипропиленовая по индивидуальным параметрам",
+        "fullName": "Плёнка упаковочная полипропиленовая по индивидуальным параметрам, прозрачная",
+        "image": "images/products/bopp-film.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "shrink-pof",
+      "food-film",
+      "labels"
+    ]
+  },
+  {
+    "slug": "bubble-wrap",
+    "title": "Воздушно-пузырчатая плёнка",
+    "pageTitle": "Воздушно-пузырчатая плёнка - САНС",
+    "metaDescription": "Воздушно-пузырчатая плёнка 2-х и 3-х слойная. Ширина 300-1500мм",
+    "shortDescription": "2-х и 3-х слойная. Ширина 300-1500мм",
+    "cardTitle": "Воздушно-пузырчатая плёнка",
+    "description": "Защитная упаковка для хрупких товаров. Амортизирует удары, защищает от повреждений при транспортировке.",
+    "image": "images/products/bubble-wrap.jpg",
+    "mainImage": "images/products/bubble-wrap.jpg",
+    "orderUrl": "https://sans59.ru/ishop/22",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Слои",
+        "value": "2-х и 3-х слойная"
+      },
+      {
+        "label": "Ширина",
+        "value": "300-1500 мм"
+      },
+      {
+        "label": "Длина рулона",
+        "value": "50-100 м"
+      },
+      {
+        "label": "Диаметр пузырьков",
+        "value": "6-30 мм"
+      },
+      {
+        "label": "Применение",
+        "value": "защита хрупких товаров"
+      }
+    ],
+    "features": [
+      "Амортизация ударов",
+      "Легкий вес",
+      "Влагостойкость",
+      "Многоразовое использование",
+      "Разные размеры пузырьков"
+    ],
+    "variants": [
+      {
+        "id": "bubble-03-80-15",
+        "name": "Плёнка ВП 0,3м x 80п/м (воздушно-пузырьковая, двухслойная) 15 кв/м",
+        "fullName": "Плёнка ВП 0,3м x 80п/м (воздушно-пузырьковая, двухслойная) 15 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-04-50-20",
+        "name": "Плёнка ВП 0,4м x 50п/м (воздушно-пузырьковая, двухслойная) 20 кв/м",
+        "fullName": "Плёнка ВП 0,4м x 50п/м (воздушно-пузырьковая, двухслойная) 20 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-05-50-25",
+        "name": "Плёнка ВП 0,5м x 50п/м (воздушно-пузырьковая, двухслойная) 25 кв/м",
+        "fullName": "Плёнка ВП 0,5м x 50п/м (воздушно-пузырьковая, двухслойная) 25 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-05-100-50",
+        "name": "Плёнка ВП 0,5м x 100п/м (воздушно-пузырьковая, двухслойная) 50 кв/м",
+        "fullName": "Плёнка ВП 0,5м x 100п/м (воздушно-пузырьковая, двухслойная) 50 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-06-50-30",
+        "name": "Плёнка ВП 0,6м x 50п/м (воздушно-пузырьковая, двухслойная) 30 кв/м",
+        "fullName": "Плёнка ВП 0,6м x 50п/м (воздушно-пузырьковая, двухслойная) 30 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-12-50-60",
+        "name": "Плёнка ВП 1,2м x 50п/м (воздушно-пузырьковая, двухслойная) 60 кв/м",
+        "fullName": "Плёнка ВП 1,2м x 50п/м (воздушно-пузырьковая, двухслойная) 60 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-12-100-120-2l",
+        "name": "Плёнка ВП 1,2м x 100п/м (воздушно-пузырьковая, двухслойная) 120 кв/м",
+        "fullName": "Плёнка ВП 1,2м x 100п/м (воздушно-пузырьковая, двухслойная) 120 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-12-100-120-3l",
+        "name": "Плёнка ВП 1,2м x 100п/м (воздушно-пузырьковая, трёхслойная) 120 кв/м",
+        "fullName": "Плёнка ВП 1,2м x 100п/м (воздушно-пузырьковая, трёхслойная) 120 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-15-50-75",
+        "name": "Плёнка ВП 1,5м x 50п/м (воздушно-пузырьковая, двухслойная) 75 кв/м",
+        "fullName": "Плёнка ВП 1,5м x 50п/м (воздушно-пузырьковая, двухслойная) 75 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-15-100-150-2l",
+        "name": "Плёнка ВП 1,5м x 100п/м (воздушно-пузырьковая, двухслойная) 150 кв/м",
+        "fullName": "Плёнка ВП 1,5м x 100п/м (воздушно-пузырьковая, двухслойная) 150 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-15-100-150-3l",
+        "name": "Плёнка ВП 1,5м x 100п/м (воздушно-пузырьковая, трёхслойная) 150 кв/м",
+        "fullName": "Плёнка ВП 1,5м x 100п/м (воздушно-пузырьковая, трёхслойная) 150 кв/м",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      },
+      {
+        "id": "bubble-15-100-150-3l-pink",
+        "name": "Плёнка ВП 1,5м x 100п/м (воздушно-пузырьковая, трёхслойная) 150 кв/м - Антистатик розовый",
+        "fullName": "Плёнка ВП 1,5м x 100п/м (воздушно-пузырьковая, трёхслойная) 150 кв/м - Антистатик, цвет - розовый",
+        "image": "images/products/bubble-wrap.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "stretch-film",
+      "pe-film",
+      "scotch"
+    ]
+  },
+  {
+    "slug": "pe-film",
+    "title": "Плёнка полиэтиленовая",
+    "pageTitle": "Плёнка полиэтиленовая - САНС",
+    "metaDescription": "Плёнка полиэтиленовая ГОСТ 10354-82. Высший и первый сорт",
+    "shortDescription": "ГОСТ 10354-82. Высший и первый сорт",
+    "cardTitle": "Плёнка полиэтиленовая",
+    "description": "Универсальная полиэтиленовая плёнка по ГОСТ 10354-82. Высший и первый сорт для различных применений.",
+    "image": "images/products/pe-film.jpg",
+    "mainImage": "images/products/pe-film.jpg",
+    "orderUrl": "https://sans59.ru/ishop/30",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "ГОСТ",
+        "value": "10354-82"
+      },
+      {
+        "label": "Сорт",
+        "value": "высший, первый"
+      },
+      {
+        "label": "Ширина",
+        "value": "1000-3000 мм"
+      },
+      {
+        "label": "Толщина",
+        "value": "40-200 мкм"
+      },
+      {
+        "label": "Применение",
+        "value": "строительство, сельское хозяйство, упаковка"
+      }
+    ],
+    "features": [
+      "Соответствие ГОСТ",
+      "Влагостойкость",
+      "Прочность",
+      "Универсальность",
+      "Доступная цена"
+    ],
+    "variants": [
+      {
+        "id": "pe-film-800-80-high",
+        "name": "Плёнка полиэтиленовая, рукав 800мм, 80мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 800мм, 80мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-2000-100-1",
+        "name": "Плёнка полиэтиленовая, рукав 2000мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 2000мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-1800-100-1",
+        "name": "Плёнка полиэтиленовая, рукав 1800мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 1800мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-1500-200-1",
+        "name": "Плёнка полиэтиленовая, рукав 1500мм, 200мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 1500мм, 200мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-200-200-high",
+        "name": "Плёнка полиэтиленовая, рукав 200мм, 200мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 200мм, 200мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-1500-150-1",
+        "name": "Плёнка полиэтиленовая, рукав 1500мм, 150мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 1500мм, 150мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-1500-150-high",
+        "name": "Плёнка полиэтиленовая, рукав 1500мм, 150мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 1500мм, 150мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-1500-100-1",
+        "name": "Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-9",
+        "name": "Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, 1 СОРТ), цвет - чёрный",
+        "fullName": "Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, 1 СОРТ), цвет - чёрный",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-1500-100-high",
+        "name": "Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ВЫСШИЙ СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-1500-80-1st",
+        "name": "Плёнка полиэтиленовая, рукав 1500мм, 80мкм (1 СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 1500мм, 80мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-1500-60-1st",
+        "name": "Плёнка полиэтиленовая, рукав 1500мм, 60мкм (1 СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 1500мм, 60мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-3000-200-1st",
+        "name": "Плёнка полиэтиленовая, рукав 3000мм, 200мкм (1 СОРТ)",
+        "fullName": "Плёнка полиэтиленовая, рукав 3000мм, 200мкм (ГОСТ 10354-82, 1 СОРТ)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      },
+      {
+        "id": "pe-film-custom",
+        "name": "Плёнка полиэтиленовая по индивидуальным параметрам",
+        "fullName": "Плёнка полиэтиленовая (рукав/полурукав/полотно) по индивидуальным параметрам (ГОСТ 10354-82)",
+        "image": "images/products/pe-film.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "stretch-film",
+      "bubble-wrap",
+      "shrink-pe"
+    ]
+  },
+  {
+    "slug": "pp-strap",
+    "title": "Полипропиленовая лента ПП",
+    "pageTitle": "Полипропиленовая лента ПП - САНС",
+    "metaDescription": "Полипропиленовая лента ПП. Ширина 5-19мм, толщина 0,5-1,0мм",
+    "shortDescription": "Ширина 5-19мм, толщина 0,5-1,0мм",
+    "cardTitle": "Полипропиленовая лента ПП",
+    "description": "Упаковочная лента для обвязки коробок и паллет. Экономичное решение для легких и средних грузов.",
+    "image": "images/products/pp-strap.jpg",
+    "mainImage": "images/products/pp-strap.jpg",
+    "orderUrl": "https://sans59.ru/ishop/38",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Ширина",
+        "value": "5-19 мм"
+      },
+      {
+        "label": "Толщина",
+        "value": "0,5-1,0 мм"
+      },
+      {
+        "label": "Длина",
+        "value": "1000-3000 м"
+      },
+      {
+        "label": "Прочность",
+        "value": "до 300 кг"
+      },
+      {
+        "label": "Применение",
+        "value": "обвязка коробок, картона, паллет"
+      }
+    ],
+    "features": [
+      "Экономичность",
+      "Легкий вес",
+      "Для ручной и машинной обвязки",
+      "Не ржавеет",
+      "Разные цвета"
+    ],
+    "variants": [
+      {
+        "id": "pp-strap-5-045-200",
+        "name": "Лента полипропиленовая 5*0,45мм, диаметр шпули 200мм",
+        "fullName": "Лента полипропиленовая 5*0,45мм, диаметр шпули 200мм",
+        "image": "images/products/pp-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "pp-strap-9-05-200",
+        "name": "Лента полипропиленовая 9*0,5мм, диаметр шпули 200мм",
+        "fullName": "Лента полипропиленовая 9*0,5мм, диаметр шпули 200мм",
+        "image": "images/products/pp-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "pp-strap-12-05-200",
+        "name": "Лента полипропиленовая 12*0,5мм, диаметр шпули 200мм",
+        "fullName": "Лента полипропиленовая 12*0,5мм, диаметр шпули 200мм",
+        "image": "images/products/pp-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "pp-strap-12-06-200",
+        "name": "Лента полипропиленовая 12*0,6мм, диаметр шпули 200мм",
+        "fullName": "Лента полипропиленовая 12*0,6мм, диаметр шпули 200мм",
+        "image": "images/products/pp-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "pp-strap-12-07-200",
+        "name": "Лента полипропиленовая 12*0,7мм, диаметр шпули 200мм",
+        "fullName": "Лента полипропиленовая 12*0,7мм, диаметр шпули 200мм",
+        "image": "images/products/pp-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "pp-strap-12-08-200",
+        "name": "Лента полипропиленовая 12*0,8мм, диаметр шпули 200мм",
+        "fullName": "Лента полипропиленовая 12*0,8мм, диаметр шпули 200мм",
+        "image": "images/products/pp-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "pp-strap-15-07-200",
+        "name": "Лента полипропиленовая 15*0,7мм, диаметр шпули 200мм",
+        "fullName": "Лента полипропиленовая 15*0,7мм, диаметр шпули 200мм",
+        "image": "images/products/pp-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "pp-strap-15-08-200",
+        "name": "Лента полипропиленовая 15*0,8мм, диаметр шпули 200мм",
+        "fullName": "Лента полипропиленовая 15*0,8мм, диаметр шпули 200мм",
+        "image": "images/products/pp-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "pp-strap-15-10-200",
+        "name": "Лента полипропиленовая 15*1,0мм, диаметр шпули 200мм",
+        "fullName": "Лента полипропиленовая 15*1,0мм, диаметр шпули 200мм",
+        "image": "images/products/pp-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "pp-strap-19-10-200",
+        "name": "Лента полипропиленовая 19*1,0мм, диаметр шпули 200мм",
+        "fullName": "Лента полипропиленовая 19*1,0мм, диаметр шпули 200мм",
+        "image": "images/products/pp-strap.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "pet-strap",
+      "steel-strap",
+      "twine"
+    ]
+  },
+  {
+    "slug": "pet-strap",
+    "title": "Полиэстеровая лента ПЭТ",
+    "pageTitle": "Полиэстеровая лента ПЭТ - САНС",
+    "metaDescription": "Полиэстеровая лента ПЭТ зелёная, повышенной прочности",
+    "shortDescription": "Зелёная, повышенной прочности",
+    "cardTitle": "Полиэстеровая лента ПЭТ",
+    "description": "Прочная лента из полиэстера для обвязки тяжелых грузов. Зелёного цвета, устойчива к растяжению.",
+    "image": "images/products/strapping.jpg",
+    "mainImage": "images/products/strapping.jpg",
+    "orderUrl": "https://sans59.ru/ishop/53",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Материал",
+        "value": "полиэстер (ПЭТ)"
+      },
+      {
+        "label": "Ширина",
+        "value": "13-19 мм"
+      },
+      {
+        "label": "Толщина",
+        "value": "0,6-1,0 мм"
+      },
+      {
+        "label": "Прочность",
+        "value": "до 800 кг"
+      },
+      {
+        "label": "Цвет",
+        "value": "зелёный"
+      }
+    ],
+    "features": [
+      "Высокая прочность",
+      "Минимальное растяжение",
+      "Устойчивость к УФ",
+      "Для тяжелых грузов",
+      "Не повреждает груз"
+    ],
+    "variants": [
+      {
+        "id": "pet-strap-12-06-2450",
+        "name": "Полиэстеровая упаковочная стреппинг-лента ПЭТ 12*0,6мм; 2,45км, цвет - зеленый",
+        "fullName": "Полиэстеровая упаковочная стреппинг-лента ПЭТ 12*0,6мм; 2,45км, цвет - зеленый",
+        "image": "images/products/strapping.jpg",
+        "photo": null
+      },
+      {
+        "id": "pet-strap-15-089-1250",
+        "name": "Полиэстеровая упаковочная стреппинг-лента ПЭТ 15,5*0,89мм; 1,25км, цвет - зеленый",
+        "fullName": "Полиэстеровая упаковочная стреппинг-лента ПЭТ 15,5*0,89мм; 1,25км, цвет - зеленый",
+        "image": "images/products/strapping.jpg",
+        "photo": null
+      },
+      {
+        "id": "pet-strap-16-10-1100",
+        "name": "Полиэстеровая упаковочная стреппинг-лента ПЭТ 16*1,0мм; 1,1км, цвет - зеленый",
+        "fullName": "Полиэстеровая упаковочная стреппинг-лента ПЭТ 16*1,0мм; 1,1км, цвет - зеленый",
+        "image": "images/products/strapping.jpg",
+        "photo": null
+      },
+      {
+        "id": "pet-strap-19-10-900",
+        "name": "Полиэстеровая упаковочная стреппинг-лента ПЭТ 19*1,0мм; 0,9км, цвет - зеленый",
+        "fullName": "Полиэстеровая упаковочная стреппинг-лента ПЭТ 19*1,0мм; 0,9км, цвет - зеленый",
+        "image": "images/products/strapping.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "pp-strap",
+      "steel-strap",
+      "stretch-film"
+    ]
+  },
+  {
+    "slug": "steel-strap",
+    "title": "Стальная лента",
+    "pageTitle": "Стальная лента - САНС",
+    "metaDescription": "Стальная лента металлическая для тяжелых грузов. Ширина 19-20мм",
+    "shortDescription": "Металлическая для тяжелых грузов. Ширина 19-20мм",
+    "cardTitle": "Стальная лента",
+    "description": "Металлическая лента для обвязки самых тяжелых грузов. Максимальная прочность и надежность.",
+    "image": "images/products/pet-strap.jpg",
+    "mainImage": "images/products/pet-strap.jpg",
+    "orderUrl": "https://sans59.ru/ishop/54",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Материал",
+        "value": "сталь оцинкованная"
+      },
+      {
+        "label": "Ширина",
+        "value": "19-20 мм"
+      },
+      {
+        "label": "Толщина",
+        "value": "0,5-0,8 мм"
+      },
+      {
+        "label": "Прочность",
+        "value": "до 1500 кг"
+      },
+      {
+        "label": "Применение",
+        "value": "тяжелые грузы, металлопрокат"
+      }
+    ],
+    "features": [
+      "Максимальная прочность",
+      "Для экстремальных нагрузок",
+      "Оцинкованная защита",
+      "Не растягивается",
+      "Долговечность"
+    ],
+    "variants": [
+      {
+        "id": "steel-strap-19-06-anticor",
+        "name": "Стальная (металлическая) упаковочная лента 19мм 0,6мм, с антикоррозийным покрытием",
+        "fullName": "Стальная (металлическая) упаковочная лента 19мм 0,6мм, с антикоррозийным покрытием",
+        "image": "images/products/pet-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "steel-strap-20-05-gost",
+        "name": "Стальная (металлическая) упаковочная лента 20мм 0,5мм, ГОСТ 3560-73, нагартованная",
+        "fullName": "Стальная (металлическая) упаковочная лента 20мм 0,5мм, ГОСТ 3560-73, нагартованная",
+        "image": "images/products/pet-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "steel-strap-20-07-gost",
+        "name": "Стальная (металлическая) упаковочная лента 20мм 0,7мм, ГОСТ 3560-73, нагартованная",
+        "fullName": "Стальная (металлическая) упаковочная лента 20мм 0,7мм, ГОСТ 3560-73, нагартованная",
+        "image": "images/products/pet-strap.jpg",
+        "photo": null
+      },
+      {
+        "id": "steel-strap-tool-combined",
+        "name": "Комбинированное устройство для натяжения и скрепления металлической (стальной) упаковочной ленты",
+        "fullName": "Комбинированное устройство для натяжения и скрепления металлической (стальной) упаковочной ленты",
+        "image": "images/products/pet-strap.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "pet-strap",
+      "pp-strap",
+      "stretch-film"
+    ]
+  },
+  {
+    "slug": "twine",
+    "title": "Шпагат сеновязальный",
+    "pageTitle": "Шпагат сеновязальный - САНС",
+    "metaDescription": "Шпагат сеновязальный - Полипропиленовый ТЕКС 2200",
+    "shortDescription": "Полипропиленовый ТЕКС 2200",
+    "cardTitle": "Шпагат сеновязальный",
+    "description": "Полипропиленовый шпагат для сельского хозяйства, упаковки и обвязки. Прочный и надежный.",
+    "image": "images/products/twine.jpg",
+    "mainImage": "images/products/twine.jpg",
+    "orderUrl": "https://sans59.ru/ishop/46",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Материал",
+        "value": "полипропилен"
+      },
+      {
+        "label": "Линейная плотность",
+        "value": "ТЕКС 2200"
+      },
+      {
+        "label": "Вес бобины",
+        "value": "2-5 кг"
+      },
+      {
+        "label": "Прочность",
+        "value": "до 100 кг"
+      },
+      {
+        "label": "Применение",
+        "value": "упаковка сена, соломы, обвязка"
+      }
+    ],
+    "features": [
+      "Высокая прочность",
+      "Не гниет",
+      "Влагостойкий",
+      "УФ-стабилизация",
+      "Экономичный расход"
+    ],
+    "variants": [],
+    "related": [
+      "pp-strap",
+      "clip-tape",
+      "stretch-film"
+    ]
+  },
+  {
+    "slug": "clip-tape",
+    "title": "Лента для клипсатора",
+    "pageTitle": "Лента для клипсатора - САНС",
+    "metaDescription": "Лента для клипсатора - Для закрытия пакетов, усилена стальными проволоками",
+    "shortDescription": "Для закрытия пакетов, усилена стальными проволоками",
+    "cardTitle": "Лента для клипсатора",
+    "description": "Лента для закрытия пакетов клипсатором. Усилена стальными проволоками для надежной фиксации.",
+    "image": "images/products/clip-tape.jpg",
+    "mainImage": "images/products/clip-tape.jpg",
+    "orderUrl": "https://sans59.ru/ishop/67",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Материал",
+        "value": "бумага + стальная проволока"
+      },
+      {
+        "label": "Ширина",
+        "value": "7-12 мм"
+      },
+      {
+        "label": "Длина",
+        "value": "30-200 м"
+      },
+      {
+        "label": "Цвета",
+        "value": "белый, цветной"
+      },
+      {
+        "label": "Применение",
+        "value": "закрытие пакетов с хлебом, выпечкой"
+      }
+    ],
+    "features": [
+      "Быстрое закрытие",
+      "Надежная фиксация",
+      "Для пищевых продуктов",
+      "Сохраняет свежесть",
+      "Экономичный расход"
+    ],
+    "variants": [
+      {
+        "id": "clip-tape-white-600",
+        "name": "Лента для клипсатора белая 600м",
+        "fullName": "Лента для клипсатора (цвет - белый) 600м",
+        "image": "images/products/clip-tape.jpg",
+        "photo": null
+      },
+      {
+        "id": "clip-tape-yellow-600",
+        "name": "Лента для клипсатора жёлтая 600м",
+        "fullName": "Лента для клипсатора (цвет - жёлтый) 600м",
+        "image": "images/products/clip-tape.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "food-film",
+      "zip-bags",
+      "twine"
+    ]
+  },
+  {
+    "slug": "vacuum-bags",
+    "title": "Вакуумные пакеты",
+    "pageTitle": "Вакуумные пакеты - САНС",
+    "metaDescription": "Вакуумные пакеты - Пищевые, толщина 65мкм. С рифлёным слоем",
+    "shortDescription": "Пищевые, толщина 65мкм. С рифлёным слоем",
+    "cardTitle": "Вакуумные пакеты",
+    "description": "Пищевые вакуумные пакеты с рифлёным слоем. Для длительного хранения продуктов и sous-vide.",
+    "image": "images/products/vacuum-bags.jpg",
+    "mainImage": "images/products/vacuum-bags.jpg",
+    "orderUrl": "https://sans59.ru/ishop/23",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Толщина",
+        "value": "65 мкм (PA/PE)"
+      },
+      {
+        "label": "Структура",
+        "value": "с рифлёным слоем"
+      },
+      {
+        "label": "Размеры",
+        "value": "от 15x20 см до 30x40 см"
+      },
+      {
+        "label": "Температура",
+        "value": "от -40°C до +100°C"
+      },
+      {
+        "label": "Применение",
+        "value": "вакуумирование, заморозка, sous-vide"
+      }
+    ],
+    "features": [
+      "Продлевает срок хранения",
+      "Для вакуумных упаковщиков",
+      "Подходит для заморозки",
+      "Можно варить (sous-vide)",
+      "Пищевой сертификат"
+    ],
+    "variants": [
+      {
+        "id": "vacuum-120x175-65",
+        "name": "Пакет вакуумный 120*175мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 120*175мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-120x280-65",
+        "name": "Пакет вакуумный 120*280мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 120*280мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-120x420-65",
+        "name": "Пакет вакуумный 120*420мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 120*420мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "cardboard-substrate-80x300",
+        "name": "Ламинированные подложки из картона 80*300мм (золото/серебро)",
+        "fullName": "Ламинированные подложки из картона 80*300мм (золото/серебро)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-160x200-65",
+        "name": "Пакет вакуумный 160*200мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 160*200мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-160x250-65",
+        "name": "Пакет вакуумный 160*250мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 160*250мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-180x250-65",
+        "name": "Пакет вакуумный 180*250мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 180*250мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-200x250-65",
+        "name": "Пакет вакуумный 200*250мм, 65мкм (200 шт/уп)",
+        "fullName": "Пакет вакуумный 200*250мм, 65мкм (200 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-200x300-65",
+        "name": "Пакет вакуумный 200*300мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 200*300мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-200x400-65",
+        "name": "Пакет вакуумный 200*400мм, 65мкм (200 шт/уп)",
+        "fullName": "Пакет вакуумный 200*400мм, 65мкм (200 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-250x300-65",
+        "name": "Пакет вакуумный 250*300мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 250*300мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-250x350-65",
+        "name": "Пакет вакуумный 250*350мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 250*350мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-300x400-65",
+        "name": "Пакет вакуумный 300*400мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 300*400мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-350x500-65",
+        "name": "Пакет вакуумный 350*500мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 350*500мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "vacuum-400x600-65",
+        "name": "Пакет вакуумный 400*600мм, 65мкм (100 шт/уп)",
+        "fullName": "Пакет вакуумный 400*600мм, 65мкм (100 шт/уп)",
+        "image": "images/products/vacuum-bags.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "zip-bags",
+      "food-film",
+      "shrink-pof"
+    ]
+  },
+  {
+    "slug": "zip-bags",
+    "title": "Пакеты с замком зип-лок",
+    "pageTitle": "Пакеты с замком зип-лок - САНС",
+    "metaDescription": "Пакеты с замком зип-лок - Грипперы со струнной защёлкой",
+    "shortDescription": "Грипперы со струнной защёлкой",
+    "cardTitle": "Пакеты с замком зип-лок",
+    "description": "Грипперы со струнной защёлкой для многоразового использования. Удобная упаковка продуктов и мелких предметов.",
+    "image": "images/products/zip-bags.jpg",
+    "mainImage": "images/products/zip-bags.jpg",
+    "orderUrl": "https://sans59.ru/ishop/61",
+    "sku": null,
+    "price": null,
+    "unit": null,
+    "specs": [
+      {
+        "label": "Материал",
+        "value": "полиэтилен высокого давления"
+      },
+      {
+        "label": "Толщина",
+        "value": "40-60 мкм"
+      },
+      {
+        "label": "Размеры",
+        "value": "от 6x8 см до 40x60 см"
+      },
+      {
+        "label": "Застёжка",
+        "value": "zip-lock (струнная)"
+      },
+      {
+        "label": "Применение",
+        "value": "продукты, документы, мелкие детали"
+      }
+    ],
+    "features": [
+      "Многоразовое использование",
+      "Герметичное закрытие",
+      "Прозрачный материал",
+      "Легко открывается и закрывается",
+      "Защита от влаги и пыли"
+    ],
+    "variants": [
+      {
+        "id": "zip-bag-40x60",
+        "name": "Пакеты с замком зип-лок (грипперы) 40*60мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 40*60мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-50x70",
+        "name": "Пакеты с замком зип-лок (грипперы) 50*70мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 50*70мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-60x80",
+        "name": "Пакеты с замком зип-лок (грипперы) 60*80мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 60*80мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-70x100",
+        "name": "Пакеты с замком зип-лок (грипперы) 70*100мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 70*100мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-80x120",
+        "name": "Пакеты с замком зип-лок (грипперы) 80*120мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 80*120мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-100x150",
+        "name": "Пакеты с замком зип-лок (грипперы) 100*150мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 100*150мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-120x170",
+        "name": "Пакеты с замком зип-лок (грипперы) 120*170мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 120*170мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-150x200",
+        "name": "Пакеты с замком зип-лок (грипперы) 150*200мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 150*200мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-150x220",
+        "name": "Пакеты с замком зип-лок (грипперы) 150*220мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 150*220мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-180x250",
+        "name": "Пакеты с замком зип-лок (грипперы) 180*250мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 180*250мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-200x250",
+        "name": "Пакеты с замком зип-лок (грипперы) 200*250мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 200*250мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-200x300",
+        "name": "Пакеты с замком зип-лок (грипперы) 200*300мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 200*300мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-250x350",
+        "name": "Пакеты с замком зип-лок (грипперы) 250*350мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 250*350мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      },
+      {
+        "id": "zip-bag-300x400",
+        "name": "Пакеты с замком зип-лок (грипперы) 300*400мм",
+        "fullName": "Пакеты с замком зип-лок (грипперы) 300*400мм",
+        "image": "images/products/zip-bags.jpg",
+        "photo": null
+      }
+    ],
+    "related": [
+      "vacuum-bags",
+      "food-film",
+      "labels"
+    ]
+  }
+]

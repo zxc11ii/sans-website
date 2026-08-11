@@ -26,7 +26,7 @@
                     <li><a href="contacts.html" class="active">Контакты</a></li>
                 </ul>
                 <a href="tel:+73422103300" class="btn-call">+7 (342) 210-33-00</a>
-                <button class="mobile-menu-toggle" aria-label="Меню">
+                <button class="mobile-menu-toggle" aria-label="Меню" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -150,7 +150,7 @@
         <div class="container">
             <h2>Как нас найти</h2>
             <div class="map-container">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab29e16e1dca3c70b7b31c6ca7091dd0c07b78f2432a717ecccd85f8aecb77497&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab29e16e1dca3c70b7b31c6ca7091dd0c07b78f2432a717ecccd85f8aecb77497&amp;source=constructor" width="100%" height="400" frameborder="0" loading="lazy" title="Карта проезда: г. Пермь, ул. Героев Хасана, 105, корпус 44/2"></iframe>
             </div>
         </div>
     </section>
@@ -161,7 +161,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="../images/logo.png" alt="САНС" class="footer-logo-img">
+                        <img src="../images/logo.png" alt="САНС" class="footer-logo-img" loading="lazy" decoding="async">
                         <p>Упаковочные материалы и складское оборудование в Перми</p>
                     </div>
                 </div>
@@ -196,6 +196,74 @@
             <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
+
+    <!-- Shopping Cart Button -->
+    <button id="cartButton" class="cart-button" aria-label="Корзина">
+        <img src="../images/icons/shopping-cart.svg" alt="Корзина">
+        <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Корзина</h2>
+                <button class="cart-close" id="cartClose" aria-label="Закрыть">&times;</button>
+            </div>
+            <div class="cart-modal-body">
+                <div class="cart-empty" id="cartEmpty">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 7h14l-1.5 9h-11L5 7z"/>
+                        <path d="M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                        <path d="M15 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                        <path d="M5 7L3 3h18l-2 4"/>
+                    </svg>
+                    <p>Корзина пуста</p>
+                    <a href="packaging.html" class="btn btn-primary">Перейти к товарам</a>
+                </div>
+                <div class="cart-items" id="cartItems" style="display: none;"></div>
+            </div>
+            <div class="cart-modal-footer" style="display: none;">
+                <div class="cart-total">
+                    <span>Всего:</span>
+                    <span class="cart-total-count" id="cartTotalCount">0 товаров</span>
+                </div>
+                <button class="btn btn-primary cart-checkout-btn" id="cartCheckoutBtn">Оставить заявку</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Order Form Modal -->
+    <div class="cart-modal" id="cartOrderModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Оформление заявки</h2>
+                <button class="cart-close" id="cartOrderClose" aria-label="Закрыть">&times;</button>
+            </div>
+            <div class="cart-modal-body">
+                <div class="cart-order-summary" id="cartOrderSummary">
+                    <h3>Ваш заказ:</h3>
+                    <div class="cart-order-items" id="cartOrderItems"></div>
+                </div>
+                <form class="contact-form" id="cartOrderForm">
+                    <div class="form-group">
+                        <input type="text" id="cartOrderName" name="name" placeholder="Ваше имя *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="cartOrderPhone" name="phone" placeholder="Телефон *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="cartOrderEmail" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="cartOrderMessage" name="message" rows="3" placeholder="Комментарий к заказу"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
+                    <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="../js/script.js"></script>
 </body>

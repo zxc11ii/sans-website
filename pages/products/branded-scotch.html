@@ -26,7 +26,7 @@
                     <li><a href="../contacts.html">Контакты</a></li>
                 </ul>
                 <a href="tel:+73422103300" class="btn-call">+7 (342) 210-33-00</a>
-                <button class="mobile-menu-toggle" aria-label="Меню">
+                <button class="mobile-menu-toggle" aria-label="Меню" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -55,13 +55,13 @@
                         <img src="../../images/products/branded-scotch.jpg" alt="Брендированный скотч">
                     </div>
                 </div>
-                
+
                 <div class="product-detail-info">
                     <h1>Брендированный скотч</h1>
                     <p class="product-description">
                         Упаковочная лента с вашим логотипом - эффективный инструмент брендинга и защиты от подделок. Поверхностная и межслойная печать.
                     </p>
-                    
+
                     <div class="product-specs">
                         <h3>Характеристики:</h3>
                         <ul>
@@ -72,7 +72,7 @@
                             <li><strong>Минимальный тираж:</strong> от 100 рулонов</li>
                         </ul>
                     </div>
-                    
+
                     <div class="product-features">
                         <h3>Преимущества:</h3>
                         <ul>
@@ -83,9 +83,9 @@
                             <li>✓ Любой дизайн и логотип</li>
                         </ul>
                     </div>
-                    
+
                     <div class="product-actions">
-                        <a href="https://sans59.ru/ishop/56" class="btn btn-primary" target="_blank">Заказать на сайте →</a>
+                        <a href="https://sans59.ru/ishop/56" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Заказать на сайте →</a>
                         <a href="../contacts.html" class="btn btn-secondary">Связаться с нами</a>
                     </div>
                 </div>
@@ -100,25 +100,25 @@
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image-placeholder">
-                        <img src="../../images/products/scotch.jpg" alt="Скотч упаковочный" class="product-image">
+                        <img src="../../images/products/scotch.jpg" alt="Скотч упаковочный" class="product-image" loading="lazy" decoding="async">
                     </div>
                     <h3>Скотч упаковочный</h3>
-                    <p>Прозрачный, коричневый, белый. Ширина 9-150мм</p>
+                    <p>Прозрачный, коричневый, белый. Ширина 9-150мм, длина 50-990м</p>
                     <a href="scotch.html" class="product-link">Подробнее →</a>
                 </div>
-                
+
                 <div class="product-card">
                     <div class="product-image-placeholder">
-                        <img src="../../images/products/warning-scotch.jpg" alt="Скотч с надписью" class="product-image">
+                        <img src="../../images/products/warning-scotch.jpg" alt="Скотч с надписью" class="product-image" loading="lazy" decoding="async">
                     </div>
                     <h3>Скотч с надписью</h3>
-                    <p>"ХРУПКОЕ", "СТЕКЛО", "АКЦИЯ", "ПОДАРОК"</p>
+                    <p>&quot;ХРУПКОЕ&quot;, &quot;СТЕКЛО&quot;, &quot;АКЦИЯ&quot;, &quot;ПОДАРОК&quot;</p>
                     <a href="warning-scotch.html" class="product-link">Подробнее →</a>
                 </div>
-                
+
                 <div class="product-card">
                     <div class="product-image-placeholder">
-                        <img src="../../images/products/labels.jpg" alt="Этикетки" class="product-image">
+                        <img src="../../images/products/labels.jpg" alt="Этикетки самоклеящиеся" class="product-image" loading="lazy" decoding="async">
                     </div>
                     <h3>Этикетки самоклеящиеся</h3>
                     <p>Бумажные и синтетические. Более 200 типоразмеров</p>
@@ -134,7 +134,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="../../images/logo.png" alt="САНС" class="footer-logo-img">
+                        <img src="../../images/logo.png" alt="САНС" class="footer-logo-img" loading="lazy" decoding="async">
                         <p>Упаковочные материалы и складское оборудование в Перми</p>
                     </div>
                 </div>
@@ -178,11 +178,11 @@
                 <strong>Специальное предложение!</strong>
                 <p>Скидка при первом заказе</p>
             </div>
-            <button class="discount-popup-close" id="discountClose">×</button>
+            <button class="discount-popup-close" id="discountClose" aria-label="Закрыть">×</button>
         </div>
-        
+
         <div class="discount-popup-full" id="discountFull">
-            <button class="discount-popup-close-full" id="discountCloseFull">×</button>
+            <button class="discount-popup-close-full" id="discountCloseFull" aria-label="Закрыть">×</button>
             <div class="discount-popup-header">
                 <div class="discount-popup-icon-large">🎁</div>
                 <h3>Получите скидку!</h3>
@@ -218,7 +218,7 @@
         <div class="cart-modal-content">
             <div class="cart-modal-header">
                 <h2>Корзина</h2>
-                <button class="cart-close" id="cartClose">&times;</button>
+                <button class="cart-close" id="cartClose" aria-label="Закрыть">&times;</button>
             </div>
             <div class="cart-modal-body">
                 <div class="cart-empty" id="cartEmpty">
@@ -248,7 +248,7 @@
         <div class="cart-modal-content">
             <div class="cart-modal-header">
                 <h2>Оформление заявки</h2>
-                <button class="cart-close" id="cartOrderClose">&times;</button>
+                <button class="cart-close" id="cartOrderClose" aria-label="Закрыть">&times;</button>
             </div>
             <div class="cart-modal-body">
                 <div class="cart-order-summary" id="cartOrderSummary">
@@ -278,4 +278,3 @@
     <script src="../../js/script.js"></script>
 </body>
 </html>
-

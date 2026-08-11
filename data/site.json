@@ -1,0 +1,37 @@
+{
+  "name": "САНС",
+  "tagline": "Упаковочные материалы и складское оборудование в Перми",
+  "phone": "+7 (342) 210-33-00",
+  "phoneHref": "+73422103300",
+  "phoneSecond": "+7 (342) 259-68-59",
+  "phoneSecondHref": "+73422596859",
+  "phoneMessenger": "+7 (950) 475-33-00",
+  "phoneMessengerHref": "+79504753300",
+  "email": "2103300@mail.ru",
+  "address": "г. Пермь, ул. Героев Хасана, 105, корпус 44/2",
+  "workHours": "Пн-Пт: 9:00 - 18:00",
+  "copyrightYear": "2026",
+  "dataUpdated": "22.01.2026",
+  "nav": [
+    {
+      "label": "Главная",
+      "href": "index.html",
+      "key": "index"
+    },
+    {
+      "label": "О компании",
+      "href": "pages/about.html",
+      "key": "about"
+    },
+    {
+      "label": "Упаковка",
+      "href": "pages/packaging.html",
+      "key": "packaging"
+    },
+    {
+      "label": "Контакты",
+      "href": "pages/contacts.html",
+      "key": "contacts"
+    }
+  ]
+}

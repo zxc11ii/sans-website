@@ -1,0 +1,111 @@
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Упаковочные материалы<br>
+                    <span class="highlight">для вашего бизнеса</span>
+                </h1>
+                <p class="hero-subtitle">Полный ассортимент товаров для упаковки, маркировки и складского оборудования в Перми</p>
+                <div class="hero-features">
+                    <div class="feature-badge">
+                        <span class="badge-icon">✓</span>
+                        <span>30 лет на рынке</span>
+                    </div>
+                    <div class="feature-badge">
+                        <span class="badge-icon">✓</span>
+                        <span>3000+ клиентов</span>
+                    </div>
+                    <div class="feature-badge">
+                        <span class="badge-icon">✓</span>
+                        <span>Бесплатная доставка</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="{{root}}pages/contacts.html" class="btn btn-primary">Оформить заказ</a>
+                    <a href="{{root}}pages/packaging.html" class="btn btn-secondary">Каталог товаров</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Прокрутите вниз</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Наши направления</span>
+                <h2 class="section-title">Что мы предлагаем</h2>
+            </div>
+            <div class="services-grid">
+                <a href="{{root}}pages/packaging.html" class="service-card">
+                    <img src="{{root}}images/icons/package-search.svg" alt="" class="service-icon-img">
+                    <h3>Товары для упаковки</h3>
+                    <p>Скотч, стрейч-пленка, стреппинг-ленты, термоусадочная пленка, пакеты и многое другое</p>
+                    <span class="service-count">{{productCount}} {{productCountWord}}</span>
+                    <span class="service-link">Перейти в каталог →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-preview-grid">
+                <div class="about-preview-content">
+                    <span class="section-label">О компании</span>
+                    <h2 class="section-title">САНС - Ваш надежный партнер с 1995 года</h2>
+                    <p>
+                        Мы специализируемся на поставках упаковочных материалов и складской техники в Перми и Пермском крае. За 30 лет работы нашими клиентами стали более 3000 компаний.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <img src="{{root}}images/icons/icon-clock.svg" alt="" class="stat-icon-img">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">лет на рынке</span>
+                        </div>
+                        <div class="stat-item">
+                            <img src="{{root}}images/icons/handshake%20(1).svg" alt="" class="stat-icon-img">
+                            <span class="stat-number">3000+</span>
+                            <span class="stat-label">клиентов</span>
+                        </div>
+                        <div class="stat-item">
+                            <img src="{{root}}images/icons/warehouse.svg" alt="" class="stat-icon-img">
+                            <span class="stat-number">1500м²</span>
+                            <span class="stat-label">складской комплекс</span>
+                        </div>
+                    </div>
+                    <a href="{{root}}pages/about.html" class="btn btn-primary">Подробнее о компании</a>
+                </div>
+                <div class="about-preview-image">
+                    <div class="image-placeholder">
+                        <img src="{{root}}images/logo.png" alt="САНС - Упаковочные материалы" class="placeholder-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section class="delivery">
+        <div class="container">
+            <div class="delivery-grid">
+                <div class="delivery-card">
+                    <img src="{{root}}images/icons/icon-transport.svg" alt="" class="delivery-icon-img">
+                    <h3>Доставка по Перми</h3>
+                    <p><strong>Бесплатно</strong> при сумме заказа от 2000 ₽</p>
+                    <p class="delivery-note">исключая отдаленные районы</p>
+                </div>
+                <div class="delivery-card">
+                    <img src="{{root}}images/icons/icon-location.svg" alt="" class="delivery-icon-img">
+                    <h3>Самовывоз</h3>
+                    <p>{{address}}</p>
+                </div>
+            </div>
+        </div>
+    </section>

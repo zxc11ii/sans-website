@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -25,7 +26,7 @@
                     <li><a href="../contacts.html">Контакты</a></li>
                 </ul>
                 <a href="tel:+73422103300" class="btn-call">+7 (342) 210-33-00</a>
-                <button class="mobile-menu-toggle" aria-label="Меню">
+                <button class="mobile-menu-toggle" aria-label="Меню" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -34,6 +35,7 @@
         </div>
     </header>
 
+    <!-- Breadcrumbs -->
     <section class="breadcrumbs">
         <div class="container">
             <a href="../../index.html">Главная</a>
@@ -44,6 +46,7 @@
         </div>
     </section>
 
+    <!-- Product Detail -->
     <section class="product-detail">
         <div class="container">
             <div class="product-detail-grid">
@@ -52,13 +55,13 @@
                         <img src="../../images/products/pe-film.jpg" alt="Плёнка полиэтиленовая">
                     </div>
                 </div>
-                
+
                 <div class="product-detail-info">
                     <h1>Плёнка полиэтиленовая</h1>
                     <p class="product-description">
                         Универсальная полиэтиленовая плёнка по ГОСТ 10354-82. Высший и первый сорт для различных применений.
                     </p>
-                    
+
                     <div class="product-specs">
                         <h3>Характеристики:</h3>
                         <ul>
@@ -69,7 +72,7 @@
                             <li><strong>Применение:</strong> строительство, сельское хозяйство, упаковка</li>
                         </ul>
                     </div>
-                    
+
                     <div class="product-features">
                         <h3>Преимущества:</h3>
                         <ul>
@@ -80,9 +83,9 @@
                             <li>✓ Доступная цена</li>
                         </ul>
                     </div>
-                    
+
                     <div class="product-actions">
-                        <a href="https://sans59.ru/ishop/30" class="btn btn-primary" target="_blank">Заказать на сайте →</a>
+                        <a href="https://sans59.ru/ishop/30" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Заказать на сайте →</a>
                         <a href="../contacts.html" class="btn btn-secondary">Связаться с нами</a>
                     </div>
                 </div>
@@ -100,112 +103,190 @@
                         <span class="placeholder-text">Фото скоро появится</span>
                     </div>
                     <h3>Плёнка полиэтиленовая, рукав 800мм, 80мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)</h3>
-                    <button class="btn-add-to-cart" data-product-id="pe-film-800-80-high" data-product-name="Плёнка полиэтиленовая, рукав 800мм, 80мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)" data-product-image="../../images/products/pe-film.jpg"><img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">В корзину</button>
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-800-80-high"
+                            data-product-name="Плёнка полиэтиленовая, рукав 800мм, 80мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)"
+                            data-product-image="../../images/products/pe-film.jpg">
+                        <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
+                        В корзину
+                    </button>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-image-placeholder"><span class="placeholder-text">Фото скоро появится</span></div>
+                    <div class="product-image-placeholder">
+                        <span class="placeholder-text">Фото скоро появится</span>
+                    </div>
                     <h3>Плёнка полиэтиленовая, рукав 2000мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)</h3>
-                    <button class="btn-add-to-cart" data-product-id="pe-film-2000-100-1" data-product-name="Плёнка полиэтиленовая, рукав 2000мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)" data-product-image="../../images/products/pe-film.jpg"><img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">В корзину</button>
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-2000-100-1"
+                            data-product-name="Плёнка полиэтиленовая, рукав 2000мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)"
+                            data-product-image="../../images/products/pe-film.jpg">
+                        <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
+                        В корзину
+                    </button>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-image-placeholder"><span class="placeholder-text">Фото скоро появится</span></div>
+                    <div class="product-image-placeholder">
+                        <span class="placeholder-text">Фото скоро появится</span>
+                    </div>
                     <h3>Плёнка полиэтиленовая, рукав 1800мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)</h3>
-                    <button class="btn-add-to-cart" data-product-id="pe-film-1800-100-1" data-product-name="Плёнка полиэтиленовая, рукав 1800мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)" data-product-image="../../images/products/pe-film.jpg"><img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">В корзину</button>
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-1800-100-1"
+                            data-product-name="Плёнка полиэтиленовая, рукав 1800мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)"
+                            data-product-image="../../images/products/pe-film.jpg">
+                        <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
+                        В корзину
+                    </button>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-image-placeholder"><span class="placeholder-text">Фото скоро появится</span></div>
+                    <div class="product-image-placeholder">
+                        <span class="placeholder-text">Фото скоро появится</span>
+                    </div>
                     <h3>Плёнка полиэтиленовая, рукав 1500мм, 200мкм (ГОСТ 10354-82, 1 СОРТ)</h3>
-                    <button class="btn-add-to-cart" data-product-id="pe-film-1500-200-1" data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 200мкм (ГОСТ 10354-82, 1 СОРТ)" data-product-image="../../images/products/pe-film.jpg"><img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">В корзину</button>
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-1500-200-1"
+                            data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 200мкм (ГОСТ 10354-82, 1 СОРТ)"
+                            data-product-image="../../images/products/pe-film.jpg">
+                        <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
+                        В корзину
+                    </button>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-image-placeholder"><span class="placeholder-text">Фото скоро появится</span></div>
+                    <div class="product-image-placeholder">
+                        <span class="placeholder-text">Фото скоро появится</span>
+                    </div>
                     <h3>Плёнка полиэтиленовая, рукав 200мм, 200мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)</h3>
-                    <button class="btn-add-to-cart" data-product-id="pe-film-200-200-high" data-product-name="Плёнка полиэтиленовая, рукав 200мм, 200мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)" data-product-image="../../images/products/pe-film.jpg"><img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">В корзину</button>
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-200-200-high"
+                            data-product-name="Плёнка полиэтиленовая, рукав 200мм, 200мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)"
+                            data-product-image="../../images/products/pe-film.jpg">
+                        <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
+                        В корзину
+                    </button>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-image-placeholder"><span class="placeholder-text">Фото скоро появится</span></div>
+                    <div class="product-image-placeholder">
+                        <span class="placeholder-text">Фото скоро появится</span>
+                    </div>
                     <h3>Плёнка полиэтиленовая, рукав 1500мм, 150мкм (ГОСТ 10354-82, 1 СОРТ)</h3>
-                    <button class="btn-add-to-cart" data-product-id="pe-film-1500-150-1" data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 150мкм (ГОСТ 10354-82, 1 СОРТ)" data-product-image="../../images/products/pe-film.jpg"><img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">В корзину</button>
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-1500-150-1"
+                            data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 150мкм (ГОСТ 10354-82, 1 СОРТ)"
+                            data-product-image="../../images/products/pe-film.jpg">
+                        <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
+                        В корзину
+                    </button>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-image-placeholder"><span class="placeholder-text">Фото скоро появится</span></div>
+                    <div class="product-image-placeholder">
+                        <span class="placeholder-text">Фото скоро появится</span>
+                    </div>
                     <h3>Плёнка полиэтиленовая, рукав 1500мм, 150мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)</h3>
-                    <button class="btn-add-to-cart" data-product-id="pe-film-1500-150-high" data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 150мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)" data-product-image="../../images/products/pe-film.jpg"><img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">В корзину</button>
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-1500-150-high"
+                            data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 150мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)"
+                            data-product-image="../../images/products/pe-film.jpg">
+                        <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
+                        В корзину
+                    </button>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-image-placeholder"><span class="placeholder-text">Фото скоро появится</span></div>
+                    <div class="product-image-placeholder">
+                        <span class="placeholder-text">Фото скоро появится</span>
+                    </div>
                     <h3>Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)</h3>
-                    <button class="btn-add-to-cart" data-product-id="pe-film-1500-100-1" data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)" data-product-image="../../images/products/pe-film.jpg"><img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">В корзину</button>
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-1500-100-1"
+                            data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, 1 СОРТ)"
+                            data-product-image="../../images/products/pe-film.jpg">
+                        <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
+                        В корзину
+                    </button>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-image-placeholder"><span class="placeholder-text">Фото скоро появится</span></div>
+                    <div class="product-image-placeholder">
+                        <span class="placeholder-text">Фото скоро появится</span>
+                    </div>
                     <h3>Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, 1 СОРТ), цвет - чёрный</h3>
-                    <a href="#" class="product-link">подробнее →</a>
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-9"
+                            data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, 1 СОРТ), цвет - чёрный"
+                            data-product-image="../../images/products/pe-film.jpg">
+                        <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
+                        В корзину
+                    </button>
                 </div>
-                
+
                 <div class="product-card">
                     <div class="product-image-placeholder">
                         <span class="placeholder-text">Фото скоро появится</span>
                     </div>
                     <h3>Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ГОСТ 10354-82, ВЫСШИЙ СОРТ)</h3>
-                    <button class="btn-add-to-cart" 
-                            data-product-id="pe-film-1500-100-high" 
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-1500-100-high"
                             data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 100мкм (ВЫСШИЙ СОРТ)"
                             data-product-image="../../images/products/pe-film.jpg">
                         <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
                         В корзину
                     </button>
                 </div>
-                
+
                 <div class="product-card">
                     <div class="product-image-placeholder">
                         <span class="placeholder-text">Фото скоро появится</span>
                     </div>
                     <h3>Плёнка полиэтиленовая, рукав 1500мм, 80мкм (ГОСТ 10354-82, 1 СОРТ)</h3>
-                    <button class="btn-add-to-cart" 
-                            data-product-id="pe-film-1500-80-1st" 
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-1500-80-1st"
                             data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 80мкм (1 СОРТ)"
                             data-product-image="../../images/products/pe-film.jpg">
                         <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
                         В корзину
                     </button>
                 </div>
-                
+
                 <div class="product-card">
                     <div class="product-image-placeholder">
                         <span class="placeholder-text">Фото скоро появится</span>
                     </div>
                     <h3>Плёнка полиэтиленовая, рукав 1500мм, 60мкм (ГОСТ 10354-82, 1 СОРТ)</h3>
-                    <button class="btn-add-to-cart" 
-                            data-product-id="pe-film-1500-60-1st" 
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-1500-60-1st"
                             data-product-name="Плёнка полиэтиленовая, рукав 1500мм, 60мкм (1 СОРТ)"
                             data-product-image="../../images/products/pe-film.jpg">
                         <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
                         В корзину
                     </button>
                 </div>
-                
+
                 <div class="product-card">
                     <div class="product-image-placeholder">
                         <span class="placeholder-text">Фото скоро появится</span>
                     </div>
                     <h3>Плёнка полиэтиленовая, рукав 3000мм, 200мкм (ГОСТ 10354-82, 1 СОРТ)</h3>
-                    <button class="btn-add-to-cart" 
-                            data-product-id="pe-film-3000-200-1st" 
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-3000-200-1st"
                             data-product-name="Плёнка полиэтиленовая, рукав 3000мм, 200мкм (1 СОРТ)"
                             data-product-image="../../images/products/pe-film.jpg">
                         <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
                         В корзину
                     </button>
                 </div>
-                
+
                 <div class="product-card">
                     <div class="product-image-placeholder">
                         <span class="placeholder-text">Фото скоро появится</span>
                     </div>
                     <h3>Плёнка полиэтиленовая (рукав/полурукав/полотно) по индивидуальным параметрам (ГОСТ 10354-82)</h3>
-                    <button class="btn-add-to-cart" 
-                            data-product-id="pe-film-custom" 
+                    <button class="btn-add-to-cart"
+                            data-product-id="pe-film-custom"
                             data-product-name="Плёнка полиэтиленовая по индивидуальным параметрам"
                             data-product-image="../../images/products/pe-film.jpg">
                         <img src="../../images/icons/shopping-cart.svg" alt="" class="cart-icon">
@@ -216,46 +297,48 @@
         </div>
     </section>
 
+    <!-- Related Products -->
     <section class="related-products">
         <div class="container">
             <h2 class="section-title">Похожие товары</h2>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image-placeholder">
-                        <img src="../../images/products/stretch-film.jpg" alt="Стрейч-плёнка" class="product-image">
+                        <img src="../../images/products/stretch-film.jpg" alt="Стрейч-плёнка" class="product-image" loading="lazy" decoding="async">
                     </div>
                     <h3>Стрейч-плёнка</h3>
-                    <p>Для паллетирования</p>
+                    <p>Для ручной и машинной упаковки. Прозрачная, черная, белая</p>
                     <a href="stretch-film.html" class="product-link">Подробнее →</a>
                 </div>
-                
+
                 <div class="product-card">
                     <div class="product-image-placeholder">
-                        <img src="../../images/products/bubble-wrap.jpg" alt="Воздушно-пузырчатая плёнка" class="product-image">
+                        <img src="../../images/products/bubble-wrap.jpg" alt="Воздушно-пузырчатая плёнка" class="product-image" loading="lazy" decoding="async">
                     </div>
                     <h3>Воздушно-пузырчатая плёнка</h3>
-                    <p>2-х и 3-х слойная</p>
+                    <p>2-х и 3-х слойная. Ширина 300-1500мм</p>
                     <a href="bubble-wrap.html" class="product-link">Подробнее →</a>
                 </div>
-                
+
                 <div class="product-card">
                     <div class="product-image-placeholder">
-                        <img src="../../images/products/shrink-pe.jpg" alt="Термоусадочная плёнка ПВД" class="product-image">
+                        <img src="../../images/products/shrink-pe.jpg" alt="Термоусадочная плёнка ПВД" class="product-image" loading="lazy" decoding="async">
                     </div>
                     <h3>Термоусадочная плёнка ПВД</h3>
-                    <p>Для групповой упаковки</p>
+                    <p>Для групповой и паллетной упаковки</p>
                     <a href="shrink-pe.html" class="product-link">Подробнее →</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="../../images/logo.png" alt="САНС" class="footer-logo-img">
+                        <img src="../../images/logo.png" alt="САНС" class="footer-logo-img" loading="lazy" decoding="async">
                         <p>Упаковочные материалы и складское оборудование в Перми</p>
                     </div>
                 </div>
@@ -284,12 +367,14 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
     <button id="scrollToTop" class="scroll-to-top" aria-label="Наверх">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
 
+    <!-- Discount Popup -->
     <div class="discount-popup" id="discountPopup">
         <div class="discount-popup-mini" id="discountMini">
             <div class="discount-popup-icon">🎁</div>
@@ -297,11 +382,11 @@
                 <strong>Специальное предложение!</strong>
                 <p>Скидка при первом заказе</p>
             </div>
-            <button class="discount-popup-close" id="discountClose">×</button>
+            <button class="discount-popup-close" id="discountClose" aria-label="Закрыть">×</button>
         </div>
-        
+
         <div class="discount-popup-full" id="discountFull">
-            <button class="discount-popup-close-full" id="discountCloseFull">×</button>
+            <button class="discount-popup-close-full" id="discountCloseFull" aria-label="Закрыть">×</button>
             <div class="discount-popup-header">
                 <div class="discount-popup-icon-large">🎁</div>
                 <h3>Получите скидку!</h3>
@@ -337,7 +422,7 @@
         <div class="cart-modal-content">
             <div class="cart-modal-header">
                 <h2>Корзина</h2>
-                <button class="cart-close" id="cartClose">&times;</button>
+                <button class="cart-close" id="cartClose" aria-label="Закрыть">&times;</button>
             </div>
             <div class="cart-modal-body">
                 <div class="cart-empty" id="cartEmpty">
@@ -367,7 +452,7 @@
         <div class="cart-modal-content">
             <div class="cart-modal-header">
                 <h2>Оформление заявки</h2>
-                <button class="cart-close" id="cartOrderClose">&times;</button>
+                <button class="cart-close" id="cartOrderClose" aria-label="Закрыть">&times;</button>
             </div>
             <div class="cart-modal-body">
                 <div class="cart-order-summary" id="cartOrderSummary">
@@ -397,4 +482,3 @@
     <script src="../../js/script.js"></script>
 </body>
 </html>
-
