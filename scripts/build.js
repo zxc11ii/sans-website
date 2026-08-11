@@ -28,12 +28,23 @@ function fill(text, root) {
         ...Object.fromEntries(Object.entries(site).filter(([, v]) => typeof v === 'string')),
         root,
         productCount: String(products.length),
-        productCountWord: productWord(products.length)
+        productCountWord: productWord(products.length),
+        analyticsSentence: analyticsSentence()
     };
     return text.replace(/\{\{(\w+)\}\}/g, (match, key) => {
         if (!(key in tokens)) throw new Error(`Неизвестная подстановка {{${key}}}`);
         return tokens[key];
     });
+}
+
+// Текст про аналитику в политике конфиденциальности зависит от того,
+// подключены ли счётчики (список в data/site.json -> analytics)
+function analyticsSentence() {
+    const list = site.analytics || [];
+    if (!list.length) {
+        return 'Счётчики веб-аналитики на сайте не установлены.';
+    }
+    return `Сайт использует сервисы веб-аналитики (${list.join(', ')}), которые собирают обезличенные сведения о посещениях: адрес страницы, источник перехода, тип устройства и браузера. Эти сведения не позволяют идентифицировать вас лично.`;
 }
 
 function productWord(count) {
@@ -71,6 +82,14 @@ const pages = [
         title: 'Товары для упаковки и маркировки - САНС',
         description: 'Товары для упаковки и маркировки - скотч, пленки, ленты, пакеты в Перми',
         body: () => catalogBody(products, { root: '../' })
+    },
+    {
+        out: 'pages/privacy.html',
+        root: '../',
+        active: null,
+        title: 'Политика конфиденциальности - САНС',
+        description: 'Порядок обработки персональных данных на сайте САНС',
+        body: () => fill(readContent('privacy.html'), '../')
     },
     {
         out: 'pages/contacts.html',

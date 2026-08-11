@@ -70,7 +70,10 @@
                             <textarea id="message" name="message" rows="4" placeholder="Комментарий к заказу"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
-                        <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                        <label class="form-consent">
+                            <input type="checkbox" name="consent" required>
+                            <span>Я даю согласие на обработку персональных данных и принимаю <a href="privacy.html" target="_blank" rel="noopener">политику конфиденциальности</a></span>
+                        </label>
                     </form>
                 </div>
             </div>

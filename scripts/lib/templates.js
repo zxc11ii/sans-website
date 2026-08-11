@@ -221,6 +221,7 @@ ${links}
             </div>
             <div class="footer-bottom">
                 <p>© ${esc(site.copyrightYear)} ${esc(site.name)}. Все права защищены.</p>
+                <p><a href="${link(dir, 'pages/privacy.html')}">Политика конфиденциальности</a></p>
                 <p>Данные обновлены ${esc(site.dataUpdated)}</p>
             </div>
         </div>
@@ -234,7 +235,7 @@ const scrollTop = () => `    <!-- Scroll to Top Button -->
         </svg>
     </button>`;
 
-const discountPopup = () => `    <!-- Discount Popup -->
+const discountPopup = ({ dir }) => `    <!-- Discount Popup -->
     <div class="discount-popup" id="discountPopup">
         <div class="discount-popup-mini" id="discountMini">
             <div class="discount-popup-icon">🎁</div>
@@ -266,7 +267,10 @@ const discountPopup = () => `    <!-- Discount Popup -->
                     <textarea id="discountMessage" name="message" rows="3" placeholder="Интересующий товар"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary btn-full">Получить скидку</button>
-                <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                <label class="form-consent">
+                    <input type="checkbox" name="consent" required>
+                    <span>Я даю согласие на обработку персональных данных и принимаю <a href="${link(dir, 'pages/privacy.html')}" target="_blank" rel="noopener">политику конфиденциальности</a></span>
+                </label>
             </form>
         </div>
     </div>`;
@@ -333,7 +337,10 @@ const cart = (site, { root, dir }) => `    <!-- Shopping Cart Button -->
                         <textarea id="cartOrderMessage" name="message" rows="3" placeholder="Комментарий к заказу"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
-                    <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                    <label class="form-consent">
+                        <input type="checkbox" name="consent" required>
+                        <span>Я даю согласие на обработку персональных данных и принимаю <a href="${link(dir, 'pages/privacy.html')}" target="_blank" rel="noopener">политику конфиденциальности</a></span>
+                    </label>
                 </form>
             </div>
         </div>
@@ -352,7 +359,7 @@ function layout(site, page) {
         scrollTop()
     ];
 
-    if (page.showPopup) parts.push('', discountPopup());
+    if (page.showPopup) parts.push('', discountPopup(page));
     parts.push('', cart(site, page));
     parts.push('', `    <script src="${page.root}js/script.js"></script>`, '</body>', '</html>', '');
 

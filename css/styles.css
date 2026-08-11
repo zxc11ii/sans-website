@@ -1018,6 +1018,96 @@ section {
     margin-top: 16px;
 }
 
+/* Согласие на обработку персональных данных под формами */
+.form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.form-consent input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: var(--primary-red);
+    cursor: pointer;
+}
+
+.form-consent a {
+    color: var(--primary-red);
+    text-decoration: underline;
+}
+
+.form-consent a:hover {
+    color: var(--dark-red);
+}
+
+/* ===== Правовые страницы (политика конфиденциальности) ===== */
+.legal-page {
+    padding: 60px 0 80px;
+}
+
+.legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-updated {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 32px;
+}
+
+.legal-content h2 {
+    font-size: 1.25rem;
+    margin: 32px 0 12px;
+    color: var(--text-dark);
+}
+
+.legal-content h2:first-of-type {
+    margin-top: 0;
+}
+
+.legal-content p {
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+.legal-list {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+}
+
+.legal-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.legal-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--primary-red);
+}
+
+.legal-content a {
+    color: var(--primary-red);
+}
+
+.footer-bottom a {
+    color: inherit;
+    text-decoration: underline;
+}
+
 
 /* ===== Stats Section ===== */
 .stats-section {
