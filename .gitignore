@@ -16,3 +16,7 @@ desktop.ini
 # Temporary files
 *.tmp
 *.temp
+
+# Админка: резервные копии данных и счётчик попыток входа
+data/backups/
+data/login-guard.php

@@ -4,8 +4,8 @@
   "private": true,
   "description": "Сайт компании САНС - упаковочные материалы, Пермь",
   "scripts": {
-    "build": "node scripts/build.js",
-    "check": "node scripts/build.js --check",
-    "serve": "node scripts/serve.js"
+    "build": "php scripts/build.php",
+    "check": "php scripts/build.php --check",
+    "serve": "php -S localhost:3000"
   }
 }

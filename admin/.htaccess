@@ -1,0 +1,9 @@
+# Без списка файлов в папке
+Options -Indexes
+
+# config.php содержит хеш пароля. Он и так не отдаётся как текст,
+# потому что исполняется, но закроем явно.
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
