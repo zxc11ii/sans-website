@@ -10,8 +10,8 @@
  * подобрать пароль по нему нельзя.
  */
 
-// Демо-пароль от 10.10.2026. Перед передачей заказчику — сменить.
-define('SANS_ADMIN_HASH', '$2y$10$yUIeNhL9z0PhYUyF0aIXmOLjeUkyOZNQyDMW3h47cK9BHghpHaCKO');
+// Временный пароль от 10.10.2026. Перед передачей заказчику — сменить.
+define('SANS_ADMIN_HASH', '$2y$10$hV9m/T7k7EuLedHe8egWEu31lj5jbu3Wt5buOpTkq0ZoTQ5/igkh6');
 
 // Время в именах резервных копий data/backups — пермское
 date_default_timezone_set('Asia/Yekaterinburg');
