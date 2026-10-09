@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Управление сайтом — САНС (демо)</title>
+<style>
+    :root {
+        --red: #C41E3A;
+        --red-dark: #8B1428;
+        --blue: #2C3E50;
+        --bg: #F5F5F5;
+        --card: #FFFFFF;
+        --line: #E0E0E0;
+        --text: #2C2C2C;
+        --muted: #6B6B6B;
+        --ok: #2E7D4F;
+        color-scheme: only light;
+        accent-color: var(--red);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        background: var(--bg);
+        color: var(--text);
+        font: 15px/1.55 system-ui, "Segoe UI", sans-serif;
+        padding: 0 0 60px;
+    }
+    a { color: var(--red); }
+    .bar {
+        background: var(--blue);
+        color: #fff;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px 16px;
+        flex-wrap: wrap;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    .bar h1 { font-size: 17px; letter-spacing: 1px; }
+    .bar .btn { border-color: rgba(255,255,255,.6); color: #fff; }
+    .bar .btn:hover { background: #fff; color: var(--blue); }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 22px 20px; }
+    .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .tabs a {
+        padding: 9px 16px; border: 1px solid var(--line); background: var(--card);
+        text-decoration: none; color: var(--text); font-size: 14px; border-radius: 6px;
+    }
+    .tabs a.on { border-color: var(--red); color: var(--red); font-weight: 600; }
+    .flash { padding: 11px 15px; margin-bottom: 10px; border-left: 4px solid var(--ok); background: #E8F4EC; border-radius: 4px; }
+    .flash.err { border-left-color: var(--red); background: #FBEAEC; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+    .card h2 { font-size: 17px; color: var(--blue); margin-bottom: 14px; }
+    .card h3 { font-size: 15px; color: var(--blue); margin: 22px 0 10px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 9px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+    th { font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); font-weight: 600; }
+    td.num { text-align: center; font-variant-numeric: tabular-nums; }
+    td.act { white-space: nowrap; text-align: right; }
+    .thumb { width: 52px; height: 52px; object-fit: cover; display: block; border-radius: 4px; background: var(--bg); }
+    .btn {
+        display: inline-block; padding: 8px 14px; border: 1px solid var(--red); border-radius: 6px;
+        background: none; color: var(--red); cursor: pointer; font: inherit; font-size: 14px;
+        text-decoration: none; line-height: 1.3;
+    }
+    .btn:hover { background: var(--red); color: #fff; }
+    .btn.primary { background: var(--red); color: #fff; }
+    .btn.primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
+    .btn.small { padding: 4px 9px; font-size: 13px; }
+    .btn.ghost { border-color: var(--line); color: var(--text); }
+    .btn.ghost:hover { background: var(--bg); color: var(--text); }
+    .btn:disabled { opacity: .35; cursor: default; background: none; color: var(--red); }
+    input[type=text], input[type=email], input[type=password], textarea {
+        background: #fff; border: 1px solid #C9C9C9; color: var(--text); border-radius: 6px;
+        padding: 9px 11px; font: inherit; width: 100%;
+    }
+    textarea { resize: vertical; min-height: 80px; }
+    input:focus, textarea:focus, button:focus-visible, a:focus-visible {
+        outline: 2px solid var(--red); outline-offset: 1px;
+    }
+    label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 5px; font-weight: 500; }
+    .field { margin-bottom: 15px; }
+    .hint { color: var(--muted); font-size: 13px; margin-top: 4px; }
+    .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
+    .photo-row { display: flex; gap: 18px; align-items: flex-start; flex-wrap: wrap; }
+    .photo-row img { width: 160px; height: 160px; object-fit: cover; border: 1px solid var(--line); border-radius: 6px; }
+    .photo-row .field { flex: 1; min-width: 220px; }
+    .checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 6px 16px; }
+    .checks label { color: var(--text); font-weight: 400; font-size: 14px; display: flex; gap: 8px; align-items: center; margin: 0; }
+    .variants td { padding: 5px 4px; }
+    .variants input[type=text] { padding: 6px 8px; font-size: 14px; }
+    .variants .new td { background: #FAFAFA; }
+    details summary { cursor: pointer; color: var(--blue); font-weight: 600; margin: 18px 0 10px; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+    .savebar {
+        position: sticky; bottom: 0; background: var(--card); border-top: 1px solid var(--line);
+        margin: 20px -20px -20px; padding: 14px 20px; border-radius: 0 0 8px 8px;
+    }
+    .inline { display: inline; }
+    .muted { color: var(--muted); font-size: 13px; }
+    .login { max-width: 360px; margin: 12vh auto; }
+    @media (max-width: 680px) {
+        .row2, .row3 { grid-template-columns: 1fr; }
+        .wrap { padding: 14px 10px; }
+        .card { padding: 14px; }
+        .savebar { margin: 16px -14px -14px; padding: 12px 14px; }
+        th.hide, td.hide { display: none; }
+        .variants th:nth-child(2), .variants td:nth-child(2) { display: none; }
+    }
+</style>
+<style>
+    .demo-note {
+        background: #FFF6DB; border-bottom: 1px solid #F0D98A; color: #5C4A12;
+        padding: 9px 20px; font-size: 14px; text-align: center;
+    }
+    .demo-note button {
+        background: none; border: 0; color: var(--red); text-decoration: underline;
+        cursor: pointer; font: inherit; padding: 0; margin-left: 6px;
+    }
+    .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<!--
+    Демо-версия админки для показа на GitHub Pages, где PHP не работает.
+    Внешне и по полям повторяет admin/index.php, но изменения хранит только
+    в браузере (localStorage) и сайт не пересобирает. Настоящая админка — admin/.
+-->
+
+<div class="demo-note">
+    Демо-версия: изменения сохраняются только в этом браузере и на сайт не попадают.
+    В рабочей версии сайт обновляется сразу после нажатия «Сохранить».
+    <button type="button" id="demo-reset">Сбросить демо</button>
+</div>
+
+<div id="app"><p class="wrap muted">Загрузка…</p></div>
+
+<script>
+(function () {
+    'use strict';
+
+    // SHA-256 демо-пароля: сам пароль в коде не пишем
+    var PASSWORD_SHA256 = '2f33ccbe6be2e477ff59776099172d38f16ed7035bfb4f0bdf1c49e2bf053975';
+    var NO_PHOTO = 'images/logo.png';
+    var KEY = 'sans-admin-demo-v1';
+    var app = document.getElementById('app');
+
+    var state = { products: [], site: {}, auth: false };
+    var flash = [];
+    var loginError = '';
+
+    // ---------------- хранилище ----------------
+
+    function storageGet(name) {
+        try { return window[name].getItem(KEY); } catch (e) { return null; }
+    }
+    function storageSet(name, value) {
+        try { window[name].setItem(KEY, value); return true; } catch (e) { return false; }
+    }
+    function storageRemove() {
+        try { localStorage.removeItem(KEY); sessionStorage.removeItem(KEY); } catch (e) { /* нет доступа */ }
+    }
+
+    function save() {
+        var ok = storageSet('localStorage', JSON.stringify({ products: state.products, site: state.site }));
+        if (!ok) {
+            note('Браузер не дал сохранить изменения (мало места или приватный режим). После перезагрузки они пропадут.', 'err');
+        }
+    }
+
+    function load() {
+        state.auth = storageGet('sessionStorage') === 'auth';
+        var saved = storageGet('localStorage');
+        if (saved) {
+            try {
+                var data = JSON.parse(saved);
+                state.products = data.products;
+                state.site = data.site;
+                return Promise.resolve();
+            } catch (e) { /* битые данные — читаем заново */ }
+        }
+        return Promise.all([
+            fetch('../data/products.json').then(function (r) { return r.json(); }),
+            fetch('../data/site.json').then(function (r) { return r.json(); })
+        ]).then(function (res) {
+            state.products = res[0];
+            state.site = res[1];
+        });
+    }
+
+    // ---------------- помощники ----------------
+
+    function e(s) {
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    }
+
+    function note(text, type) {
+        flash.push({ text: text, type: type || 'ok' });
+    }
+
+    function findIndex(slug) {
+        for (var i = 0; i < state.products.length; i++) {
+            if (state.products[i].slug === slug) return i;
+        }
+        return -1;
+    }
+
+    var LOWER = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+    var LAT = ['a','b','v','g','d','e','e','zh','z','i','y','k','l','m','n','o','p','r',
+               's','t','u','f','h','c','ch','sh','sch','','y','','e','yu','ya'];
+
+    function slugify(text, fallback) {
+        var out = '';
+        var low = String(text).toLowerCase();
+        for (var i = 0; i < low.length; i++) {
+            var k = LOWER.indexOf(low[i]);
+            out += k >= 0 ? LAT[k] : low[i];
+        }
+        out = out.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40).replace(/-+$/, '');
+        return out || fallback || 'tovar';
+    }
+
+    function phoneHref(phone) {
+        var d = phone.replace(/\D/g, '');
+        if (d.length === 11 && d[0] === '8') d = '7' + d.slice(1);
+        return '+' + d;
+    }
+
+    function imgSrc(path) {
+        return /^data:/.test(path) ? path : '../' + path;
+    }
+
+    function route() {
+        var h = location.hash.replace(/^#/, '');
+        if (h === 'site') return { tab: 'site' };
+        if (h.indexOf('edit=') === 0) return { tab: 'products', edit: decodeURIComponent(h.slice(5)) };
+        return { tab: 'products' };
+    }
+
+    function go(hash) {
+        if (location.hash === hash || (hash === '' && !location.hash)) {
+            render();
+        } else {
+            location.hash = hash;   // render вызовет hashchange
+        }
+        window.scrollTo(0, 0);
+    }
+
+    /** Фото уменьшается в браузере, как это делает сервер в рабочей версии. */
+    function readPhoto(input) {
+        var file = input && input.files && input.files[0];
+        if (!file) return Promise.resolve(null);
+        if (!/^image\/(jpeg|png|webp)$/.test(file.type)) {
+            return Promise.reject('Поддерживаются только фото JPG, PNG и WEBP: ' + file.name);
+        }
+        return new Promise(function (resolve, reject) {
+            var img = new Image();
+            var url = URL.createObjectURL(file);
+            img.onload = function () {
+                var max = 600;   // в демо меньше, чтобы влезло в память браузера
+                var scale = Math.min(1, max / Math.max(img.width, img.height));
+                var c = document.createElement('canvas');
+                c.width = Math.max(1, Math.round(img.width * scale));
+                c.height = Math.max(1, Math.round(img.height * scale));
+                var ctx = c.getContext('2d');
+                ctx.fillStyle = '#fff';
+                ctx.fillRect(0, 0, c.width, c.height);
+                ctx.drawImage(img, 0, 0, c.width, c.height);
+                URL.revokeObjectURL(url);
+                resolve(c.toDataURL('image/jpeg', 0.8));
+            };
+            img.onerror = function () {
+                URL.revokeObjectURL(url);
+                reject('Не удалось прочитать изображение: ' + file.name);
+            };
+            img.src = url;
+        });
+    }
+
+    // ---------------- экраны ----------------
+
+    function renderFlash() {
+        var html = flash.map(function (f) {
+            return '<div class="flash ' + (f.type === 'err' ? 'err' : '') + '" role="status">' + e(f.text) + '</div>';
+        }).join('');
+        flash = [];
+        return html;
+    }
+
+    function renderLogin() {
+        return '<div class="wrap login"><div class="card">' +
+            '<h2>Управление сайтом САНС</h2>' +
+            (loginError ? '<div class="flash err">' + e(loginError) + '</div>' : '') +
+            '<form id="login-form">' +
+            '<div class="field"><label for="pw">Пароль</label>' +
+            '<input type="password" id="pw" name="password" autofocus autocomplete="current-password"></div>' +
+            '<button class="btn primary" type="submit">Войти</button>' +
+            '</form></div></div>';
+    }
+
+    function renderBar(r) {
+        return '<div class="bar"><h1>Управление сайтом — САНС</h1><div>' +
+            '<a class="btn small" href="../index.html" target="_blank" rel="noopener">Открыть сайт</a> ' +
+            '<a class="btn small" href="#" id="logout">Выйти</a></div></div>' +
+            '<div class="wrap">' + renderFlash() +
+            '<nav class="tabs">' +
+            '<a href="#" class="' + (r.tab === 'products' ? 'on' : '') + '">Товары (' + state.products.length + ')</a>' +
+            '<a href="#site" class="' + (r.tab === 'site' ? 'on' : '') + '">Контакты</a>' +
+            '</nav>';
+    }
+
+    function renderList() {
+        var last = state.products.length - 1;
+        var rows = state.products.map(function (p, i) {
+            return '<tr>' +
+                '<td><img class="thumb" src="' + e(imgSrc(p.image)) + '" alt="" loading="lazy"></td>' +
+                '<td><a href="#edit=' + e(encodeURIComponent(p.slug)) + '">' + e(p.cardTitle) + '</a>' +
+                (p.image === NO_PHOTO ? '<div class="muted">нет фото</div>' : '') + '</td>' +
+                '<td class="num hide">' + p.variants.length + '</td>' +
+                '<td class="act">' +
+                '<button class="btn small ghost" data-move="up" data-slug="' + e(p.slug) + '" title="Выше" aria-label="Выше"' + (i === 0 ? ' disabled' : '') + '>↑</button> ' +
+                '<button class="btn small ghost" data-move="down" data-slug="' + e(p.slug) + '" title="Ниже" aria-label="Ниже"' + (i === last ? ' disabled' : '') + '>↓</button> ' +
+                '<a class="btn small" href="#edit=' + e(encodeURIComponent(p.slug)) + '">Изменить</a> ' +
+                '<button class="btn small" data-delete="' + e(p.slug) + '">Удалить</button>' +
+                '</td></tr>';
+        }).join('');
+
+        return '<div class="card"><h2>Товары в каталоге</h2>' +
+            '<p class="muted" style="margin:-6px 0 12px">Порядок здесь — это порядок карточек на странице «Упаковка».</p>' +
+            '<table><thead><tr><th>Фото</th><th>Название</th><th class="hide" style="text-align:center">Вариантов</th><th></th></tr></thead>' +
+            '<tbody>' + rows + '</tbody></table></div>' +
+
+            '<div class="card"><h2>Добавить товар</h2><form id="add-form">' +
+            '<div class="row2">' +
+            '<div class="field"><label for="n-title">Название</label><input type="text" id="n-title" name="title" required></div>' +
+            '<div class="field"><label for="n-short">Подпись в каталоге</label><input type="text" id="n-short" name="shortDescription" placeholder="Например: ширина 50-100 мм, белый и прозрачный"></div>' +
+            '</div>' +
+            '<div class="field"><label for="n-photo">Фото</label><input type="file" id="n-photo" name="photo" accept="image/jpeg,image/png,image/webp">' +
+            '<p class="hint">До 12 МБ. Остальное — описание, характеристики, варианты — заполняется на следующем шаге.</p></div>' +
+            '<button class="btn primary" type="submit">Добавить товар</button>' +
+            '</form></div>';
+    }
+
+    function renderEdit(p) {
+        var isNoPhoto = p.image === NO_PHOTO;
+        var specs = p.specs.map(function (s) { return s.label + ': ' + s.value; }).join('\n');
+
+        var vrows = p.variants.map(function (v, i) {
+            return '<tr data-id="' + e(v.id) + '">' +
+                '<td><input type="text" class="v-name" value="' + e(v.name) + '" aria-label="Коротко"></td>' +
+                '<td><input type="text" class="v-full" value="' + e(v.fullName) + '" aria-label="Полностью"></td>' +
+                '<td><input type="checkbox" class="v-del" aria-label="Удалить вариант"></td></tr>';
+        }).join('');
+        for (var k = 0; k < 3; k++) {
+            vrows += '<tr class="new" data-id="">' +
+                '<td><input type="text" class="v-name" placeholder="Новый вариант" aria-label="Коротко"></td>' +
+                '<td><input type="text" class="v-full" placeholder="Полное название (необязательно)" aria-label="Полностью"></td>' +
+                '<td></td></tr>';
+        }
+
+        var related = state.products.filter(function (o) { return o.slug !== p.slug; }).map(function (o) {
+            return '<label><input type="checkbox" name="related" value="' + e(o.slug) + '"' +
+                (p.related.indexOf(o.slug) >= 0 ? ' checked' : '') + '> ' + e(o.cardTitle) + '</label>';
+        }).join('');
+
+        var exists = state.original.indexOf(p.slug) >= 0;
+        var pageLink = exists
+            ? '<a href="../pages/products/' + e(encodeURIComponent(p.slug)) + '.html" target="_blank" rel="noopener">pages/products/' + e(p.slug) + '.html</a>'
+            : 'pages/products/' + e(p.slug) + '.html <span class="muted">(в демо страница не создаётся)</span>';
+
+        return '<div class="card"><h2>' + e(p.title) + '</h2>' +
+            '<p class="muted" style="margin:-8px 0 16px">Страница товара: ' + pageLink + '</p>' +
+            '<form id="edit-form" data-slug="' + e(p.slug) + '">' +
+
+            '<div class="photo-row field"><img src="' + e(imgSrc(p.image)) + '" alt="">' +
+            '<div class="field"><label for="e-photo">' + (isNoPhoto ? 'Загрузить фото' : 'Заменить фото') + '</label>' +
+            '<input type="file" id="e-photo" name="photo" accept="image/jpeg,image/png,image/webp">' +
+            '<p class="hint">JPG, PNG или WEBP до 12 МБ. Большое фото уменьшится автоматически.</p></div></div>' +
+
+            '<div class="field"><label for="e-title">Название на странице товара</label>' +
+            '<input type="text" id="e-title" name="title" value="' + e(p.title) + '" required></div>' +
+            '<div class="row2">' +
+            '<div class="field"><label for="e-card">Название в каталоге</label><input type="text" id="e-card" name="cardTitle" value="' + e(p.cardTitle) + '"></div>' +
+            '<div class="field"><label for="e-short">Подпись в каталоге</label><input type="text" id="e-short" name="shortDescription" value="' + e(p.shortDescription) + '"></div>' +
+            '</div>' +
+            '<div class="field"><label for="e-desc">Описание</label><textarea id="e-desc" name="description" rows="3">' + e(p.description) + '</textarea></div>' +
+            '<div class="row2">' +
+            '<div class="field"><label for="e-specs">Характеристики</label><textarea id="e-specs" name="specs" rows="6">' + e(specs) + '</textarea>' +
+            '<p class="hint">По одной в строке: <b>Ширина: 9-150 мм</b></p></div>' +
+            '<div class="field"><label for="e-feat">Преимущества</label><textarea id="e-feat" name="features" rows="6">' + e(p.features.join('\n')) + '</textarea>' +
+            '<p class="hint">По одному в строке</p></div>' +
+            '</div>' +
+            '<div class="field"><label for="e-order">Ссылка «Заказать на сайте»</label>' +
+            '<input type="text" id="e-order" name="orderUrl" inputmode="url" value="' + e(p.orderUrl) + '">' +
+            '<p class="hint">Если оставить пустой, кнопки не будет</p></div>' +
+
+            '<h3>Варианты (' + p.variants.length + ')</h3>' +
+            '<p class="muted" style="margin-bottom:8px">Позиции с кнопкой «В корзину». Чтобы добавить вариант, заполните пустую строку внизу; чтобы удалить — отметьте галочку.</p>' +
+            '<table class="variants"><thead><tr><th>Коротко (в корзине)</th><th>Полностью (на карточке)</th><th title="Удалить">✕</th></tr></thead>' +
+            '<tbody>' + vrows + '</tbody></table>' +
+
+            '<h3>Похожие товары</h3><div class="checks">' + related + '</div>' +
+
+            '<details><summary>Для поисковиков и будущего прайса</summary>' +
+            '<div class="field"><label for="e-ptitle">Заголовок вкладки браузера</label><input type="text" id="e-ptitle" name="pageTitle" value="' + e(p.pageTitle) + '"></div>' +
+            '<div class="field"><label for="e-meta">Описание для Яндекса и Google</label><textarea id="e-meta" name="metaDescription" rows="2">' + e(p.metaDescription) + '</textarea>' +
+            '<p class="hint">Показывается в результатах поиска под ссылкой. Желательно до 160 символов.</p></div>' +
+            '<div class="row3">' +
+            '<div class="field"><label for="e-price">Цена, ₽</label><input type="text" id="e-price" name="price" inputmode="numeric" value="' + e(p.price) + '"></div>' +
+            '<div class="field"><label for="e-sku">Артикул</label><input type="text" id="e-sku" name="sku" value="' + e(p.sku) + '"></div>' +
+            '<div class="field"><label for="e-unit">Единица</label><input type="text" id="e-unit" name="unit" value="' + e(p.unit) + '" placeholder="шт., рулон…"></div>' +
+            '</div>' +
+            '<p class="hint">Цена и артикул пока на страницах не показываются — они уходят только в разметку для поисковиков.</p>' +
+            '</details>' +
+
+            '<div class="savebar actions"><button class="btn primary" type="submit">Сохранить</button>' +
+            '<a class="btn ghost" href="#">Назад к списку</a></div>' +
+            '</form></div>';
+    }
+
+    function renderSite() {
+        var s = state.site;
+        function input(id, name, label, type, extra) {
+            return '<div class="field"><label for="' + id + '">' + label + '</label>' +
+                '<input type="' + (type || 'text') + '" id="' + id + '" name="' + name + '" value="' + e(s[name]) + '"' + (extra || '') + '></div>';
+        }
+        return '<div class="card"><h2>Контакты</h2>' +
+            '<p class="muted" style="margin-bottom:16px">Меняются сразу на всех страницах: в шапке, подвале, на странице «Контакты» и в политике конфиденциальности.</p>' +
+            '<form id="site-form"><div class="row3">' +
+            input('s-phone', 'phone', 'Основной телефон', 'text', ' inputmode="tel" required') +
+            input('s-phone2', 'phoneSecond', 'Второй телефон', 'text', ' inputmode="tel" required') +
+            input('s-phone3', 'phoneMessenger', 'Телефон для мессенджеров', 'text', ' inputmode="tel" required') +
+            '</div>' +
+            input('s-email', 'email', 'Почта', 'email', ' required') +
+            input('s-addr', 'address', 'Адрес (как показывать на сайте)', 'text', ' required') +
+            '<div class="field"><label for="s-street">Улица и дом — для Яндекса и Google</label>' +
+            '<input type="text" id="s-street" name="streetAddress" value="' + e(s.streetAddress) + '">' +
+            '<p class="hint">Без города, например: ул. Героев Хасана, 105, корпус 44/2</p></div>' +
+            '<button class="btn primary" type="submit">Сохранить</button></form></div>';
+    }
+
+    function render() {
+        if (!state.auth) {
+            app.innerHTML = renderLogin();
+            return;
+        }
+        var r = route();
+        var body;
+        if (r.tab === 'site') {
+            body = renderSite();
+        } else if (r.edit !== undefined && findIndex(r.edit) >= 0) {
+            body = renderEdit(state.products[findIndex(r.edit)]);
+        } else {
+            body = renderList();
+        }
+        app.innerHTML = renderBar(r) + body + '</div>';
+    }
+
+    // ---------------- действия ----------------
+
+    function sha256(text) {
+        if (!window.crypto || !crypto.subtle) return Promise.resolve('');
+        return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(function (buf) {
+            return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+                return ('0' + b.toString(16)).slice(-2);
+            }).join('');
+        });
+    }
+
+    function onLogin(form) {
+        sha256(form.password.value).then(function (h) {
+            if (h === PASSWORD_SHA256) {
+                state.auth = true;
+                loginError = '';
+                storageSet('sessionStorage', 'auth');
+            } else {
+                loginError = 'Неверный пароль.';
+            }
+            render();
+        });
+    }
+
+    function onSave(form) {
+        var slug = form.getAttribute('data-slug');
+        var idx = findIndex(slug);
+        if (idx < 0) return go('');
+        var p = JSON.parse(JSON.stringify(state.products[idx]));
+        var warnings = [];
+        var val = function (name) { return form.elements[name].value.trim(); };
+
+        var title = val('title');
+        if (!title) {
+            note('Название не может быть пустым. Ничего не сохранено.', 'err');
+            return render();
+        }
+        p.title = title;
+        p.cardTitle = val('cardTitle') || title;
+        p.shortDescription = val('shortDescription');
+        p.description = val('description');
+        p.pageTitle = val('pageTitle') || title + ' - САНС';
+        p.metaDescription = val('metaDescription') || p.shortDescription;
+
+        p.specs = val('specs').split(/\r?\n/).map(function (l) { return l.trim(); }).filter(Boolean).map(function (line) {
+            var pos = line.indexOf(':');
+            if (pos < 0) {
+                warnings.push('В характеристике «' + line + '» нет двоеточия — она записана как название без значения.');
+                return { label: line, value: '' };
+            }
+            return { label: line.slice(0, pos).trim(), value: line.slice(pos + 1).trim() };
+        });
+        p.features = val('features').split(/\r?\n/).map(function (l) { return l.trim(); }).filter(Boolean);
+
+        var orderUrl = val('orderUrl');
+        if (orderUrl && !/^https?:\/\/[^\s<>"]+$/i.test(orderUrl)) {
+            warnings.push('Ссылка «Заказать на сайте» должна начинаться с https:// — оставлена прежняя.');
+        } else {
+            p.orderUrl = orderUrl;
+        }
+
+        var price = val('price').replace(/\D/g, '');
+        p.price = price ? parseInt(price, 10) : null;
+        p.sku = val('sku') || null;
+        p.unit = val('unit') || null;
+
+        var checked = Array.prototype.filter.call(form.querySelectorAll('input[name=related]'), function (c) {
+            return c.checked;
+        }).map(function (c) { return c.value; });
+        var related = p.related.filter(function (r) { return checked.indexOf(r) >= 0; });
+        state.products.forEach(function (o) {
+            if (o.slug !== slug && checked.indexOf(o.slug) >= 0 && related.indexOf(o.slug) < 0) related.push(o.slug);
+        });
+        p.related = related;
+
+        var used = {};
+        state.products.forEach(function (o) { o.variants.forEach(function (v) { used[v.id] = true; }); });
+        var old = {};
+        p.variants.forEach(function (v) { old[v.id] = v; });
+        var variants = [];
+        Array.prototype.forEach.call(form.querySelectorAll('.variants tbody tr'), function (tr) {
+            var id = tr.getAttribute('data-id');
+            var name = tr.querySelector('.v-name').value.trim();
+            var full = tr.querySelector('.v-full').value.trim();
+            var del = tr.querySelector('.v-del');
+            if ((del && del.checked) || (!name && !full)) return;
+            name = name || full;
+            full = full || name;
+            var v;
+            if (id && old[id]) {
+                v = old[id];
+            } else {
+                var base = slug + '-' + slugify(name, 'variant');
+                var newId = base;
+                for (var n = 2; used[newId]; n++) newId = base + '-' + n;
+                used[newId] = true;
+                v = { id: newId, name: '', fullName: '', image: p.image, photo: null };
+            }
+            v.name = name;
+            v.fullName = full;
+            variants.push(v);
+        });
+        p.variants = variants;
+
+        readPhoto(form.elements.photo).then(function (photo) {
+            if (photo) {
+                var oldImage = p.image;
+                p.image = p.mainImage = photo;
+                p.variants.forEach(function (v) { if (v.image === oldImage) v.image = photo; });
+            }
+        }, function (err) {
+            warnings.push(err + ' Остальные изменения сохранены.');
+        }).then(function () {
+            state.products[idx] = p;
+            save();
+            note('Сохранено: ' + title + '. В рабочей версии сайт обновился бы сразу.');
+            warnings.forEach(function (w) { note(w, 'err'); });
+            render();
+            window.scrollTo(0, 0);
+        });
+    }
+
+    function onAdd(form) {
+        var title = form.elements.title.value.trim();
+        if (!title) return;
+        var base = slugify(title);
+        var slug = base;
+        for (var n = 2; findIndex(slug) >= 0; n++) slug = base + '-' + n;
+        var short = form.elements.shortDescription.value.trim();
+
+        readPhoto(form.elements.photo).catch(function (err) {
+            note(err + ' Товар добавлен без фото.', 'err');
+            return null;
+        }).then(function (photo) {
+            var image = photo || NO_PHOTO;
+            state.products.push({
+                slug: slug, title: title, pageTitle: title + ' - САНС',
+                metaDescription: short, shortDescription: short, cardTitle: title, description: short,
+                image: image, mainImage: image, orderUrl: '', sku: null, price: null, unit: null,
+                specs: [], features: [], variants: [], related: []
+            });
+            save();
+            note('Товар добавлен: ' + title + '. Заполните описание, характеристики и варианты.');
+            if (!photo) note('Фото не загружено — пока в карточке стоит логотип.', 'err');
+            go('#edit=' + encodeURIComponent(slug));
+        });
+    }
+
+    function onSite(form) {
+        var s = state.site;
+        var errors = [];
+        [['phone', 'Основной телефон'], ['phoneSecond', 'Второй телефон'], ['phoneMessenger', 'Телефон для мессенджеров']].forEach(function (f) {
+            var v = form.elements[f[0]].value.trim();
+            if (v.replace(/\D/g, '').length < 10) {
+                errors.push(f[1] + ': нужно не меньше 10 цифр.');
+                return;
+            }
+            s[f[0]] = v;
+            s[f[0] + 'Href'] = phoneHref(v);
+        });
+        var email = form.elements.email.value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            errors.push('Почта указана неверно.');
+        } else {
+            s.email = email;
+        }
+        ['address', 'streetAddress'].forEach(function (k) {
+            var v = form.elements[k].value.trim();
+            if (v) s[k] = v;
+        });
+        save();
+        if (errors.length) {
+            errors.forEach(function (x) { note(x, 'err'); });
+            note('Остальные поля сохранены.', 'err');
+        } else {
+            note('Контакты сохранены. В рабочей версии они сразу обновились бы на всех страницах.');
+        }
+        render();
+        window.scrollTo(0, 0);
+    }
+
+    // ---------------- события ----------------
+
+    app.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var f = ev.target;
+        if (f.id === 'login-form') onLogin(f);
+        else if (f.id === 'edit-form') onSave(f);
+        else if (f.id === 'add-form') onAdd(f);
+        else if (f.id === 'site-form') onSite(f);
+    });
+
+    app.addEventListener('click', function (ev) {
+        var t = ev.target.closest('button, a');
+        if (!t) return;
+        if (t.id === 'logout') {
+            ev.preventDefault();
+            state.auth = false;
+            try { sessionStorage.removeItem(KEY); } catch (e) { /* нет доступа */ }
+            go('');
+            return;
+        }
+        if (t.hasAttribute('data-move')) {
+            var i = findIndex(t.getAttribute('data-slug'));
+            var j = i + (t.getAttribute('data-move') === 'up' ? -1 : 1);
+            if (i >= 0 && j >= 0 && j < state.products.length) {
+                var tmp = state.products[i];
+                state.products[i] = state.products[j];
+                state.products[j] = tmp;
+                save();
+                render();
+            }
+            return;
+        }
+        if (t.hasAttribute('data-delete')) {
+            var slug = t.getAttribute('data-delete');
+            var k = findIndex(slug);
+            if (k < 0 || !confirm('Удалить товар «' + state.products[k].cardTitle + '» вместе со страницей?')) return;
+            var removed = state.products.splice(k, 1)[0];
+            state.products.forEach(function (o) {
+                o.related = o.related.filter(function (r) { return r !== slug; });
+            });
+            save();
+            note('Товар удалён: ' + removed.title + '.');
+            render();
+        }
+    });
+
+    window.addEventListener('hashchange', render);
+
+    document.getElementById('demo-reset').addEventListener('click', function () {
+        if (!confirm('Вернуть все товары и контакты к исходному виду?')) return;
+        var auth = state.auth;
+        storageRemove();
+        if (auth) storageSet('sessionStorage', 'auth');
+        load().then(function () {
+            note('Демо сброшено к исходным данным.');
+            go('');
+        });
+    });
+
+    load().then(function () {
+        // товары, у которых на сайте есть настоящая страница
+        return fetch('../data/products.json').then(function (r) { return r.json(); }).then(function (orig) {
+            state.original = orig.map(function (p) { return p.slug; });
+        });
+    }).then(render, function () {
+        app.innerHTML = '<div class="wrap"><div class="flash err">Не удалось загрузить данные сайта. Обновите страницу.</div></div>';
+    });
+})();
+</script>
+</body>
+</html>
